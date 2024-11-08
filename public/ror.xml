@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://www.abn.company/</title>
+  <link>https://www.abn.company/</link>
+
+<item>
+     <link>https://www.abn.company/</link>
+     <title>Website and App Development | Taking Your Brand to The Next Level</title>
+     <description>We create professional websites for your brand and help you get found through marketing. Don&amp;#x27;t hesitate to contact us, we take the work out of your hands!</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.abn.company/cases</link>
+     <title>Our Latest Cases | A Brand New Company</title>
+     <description>Our portfolio and latest projects in a list with some information about the project and where it is visible at.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.abn.company/blog</link>
+     <title>Business and Development Blog | A Brand New Company</title>
+     <description>We write articles about brands, business and development about all kind of topics. Want to stay tuned? Sign up for our newsletter.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.abn.company/contact</link>
+     <title>Plan a meeting | Start the conversation | ABN Company</title>
+     <description>Get in contact with us and start the conversation with one of our specialists. We are here to guide you through the online jungle named the internet.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.abn.company/website-development</link>
+     <title>Web development for WordPress and custom websites that works!</title>
+     <description>We develop your website with high standards based on speed, functionality and user-friendly designs. Want to see what we can do for you? Don&amp;#x27;t hesitate to contact us</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.abn.company/application-development</link>
+     <title>Application development for Android and iOS | App Developer</title>
+     <description>We develop applications with any possible functionality you could dream of. Fast, secure and reliable making your brand grow as never before.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.abn.company/e-commerce-development</link>
+     <title>We build your E-commerce store from scratch of with a existing CMS.</title>
+     <description>Make your e-commerce web-shop grow hard, be stable and optimized for the sales. We create custom shops with all your required wishes in high quality.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.abn.company/web-tool-development</link>
+     <title>Custom web tool development | Ease your online processes</title>
+     <description>We turn your visitors into leads, high quality traffic and tools that sell your service. Custom web tools build on the requirements of the client.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.abn.company/content-marketing</link>
+     <title>Content marketing, the most import factor to get found.</title>
+     <description>Content marketing is the most valuable factor for a website, application or online platform. Publishing rich articles and content will boost your brand.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.abn.company/web-scraping-data</link>
+     <title>Web Scraping Data and Automation Tools | ABN Company</title>
+     <description>Automate certain processes with scraped data by our custom build web-scrapers. We can scrape and rewrite the content from each platform or website.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
