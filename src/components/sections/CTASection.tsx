@@ -1,22 +1,38 @@
 import React from "react";
-import Link from "next/link";
-import { Button } from "../ui/button";
+import { Mail, Phone } from "lucide-react";
 
 function CTASection() {
   return (
-    <section className="bg-orange-600 py-16 transition-colors duration-300 dark:bg-orange-700">
-      <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-        <h2 className="mb-8 text-3xl font-bold text-white">
-          Klaar voor uw volgende project?
-        </h2>
-        <Link href="/contact">
-          <Button
-            size="lg"
-            className="bg-white text-orange-600 hover:bg-gray-100 dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800"
-          >
-            Neem Contact Op
-          </Button>
-        </Link>
+    <section className="bg-background py-24 transition-colors duration-300">
+      <div className="container mx-auto max-w-screen-xl px-6">
+        {/* Section Content */}
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="mb-6 text-4xl font-bold text-foreground">
+            Klaar voor een Professionele Verfbeurt?
+          </h2>
+          <p className="mb-12 text-lg text-muted-foreground">
+            Ontvang een vrijblijvende offerte voor uw verfspuitproject en ontdek
+            het verschil van professioneel vakwerk.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <a
+              href="mailto:info@verfspuitenservice.nl"
+              className="inline-flex items-center rounded-lg bg-primary px-8 py-4 font-semibold text-white shadow-md transition-transform hover:scale-105"
+            >
+              <Mail className="mr-2 h-5 w-5" />
+              Vraag Een Offerte Aan
+            </a>
+            <a
+              href="tel:+31612345678"
+              className="inline-flex items-center rounded-lg border border-border bg-muted/10 px-8 py-4 font-semibold text-foreground shadow-md transition-transform hover:bg-muted/20"
+            >
+              <Phone className="mr-2 h-5 w-5" />
+              Bel Direct: +31 6 12345678
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

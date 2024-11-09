@@ -14,6 +14,7 @@ import TestimonialsSection from "@/components/sections/TestimonialSection";
 import VerfSpuitenHero from "@/components/sections/VerfSpuitenHero";
 import BenefitsSection from "@/components/sections/BenefitsSection";
 import ProcessSection from "@/components/sections/ProcessSection";
+import ProjectsSection from "@/components/sections/ProjectsSection";
 
 const Verfspuiten = () => {
   useEffect(() => {
@@ -29,6 +30,8 @@ const Verfspuiten = () => {
         <VerfSpuitenHero />
         <BenefitsSection />
         <ProcessSection />
+        <ProjectsSection />
+        <CTASection />
       </Layout>
     </>
   );
