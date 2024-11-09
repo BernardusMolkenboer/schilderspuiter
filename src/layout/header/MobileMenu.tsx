@@ -11,6 +11,9 @@ import {
   Moon,
   Menu,
   X,
+  Facebook,
+  Instagram,
+  Linkedin,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
@@ -30,6 +33,12 @@ const services = [
     label: "Speciaal Schilderwerk",
     icon: Palette,
   },
+];
+
+const socialMedia = [
+  { href: "https://facebook.com", icon: Facebook, label: "Facebook" },
+  { href: "https://instagram.com", icon: Instagram, label: "Instagram" },
+  { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
 ];
 
 export function MobileMenu() {
@@ -60,7 +69,7 @@ export function MobileMenu() {
         </SheetTrigger>
         <SheetContent
           side="right"
-          className="animate-slide-in-right w-[300px] bg-background sm:w-[400px]"
+          className="w-[300px] animate-slide-in-right bg-background sm:w-[400px]"
         >
           <SheetTitle className="mb-4 px-4 text-lg font-bold text-primary">
             Menu
@@ -114,6 +123,27 @@ export function MobileMenu() {
               Contact
             </Link>
           </nav>
+
+          {/* Social Media Section */}
+          <div className="border-t border-border p-4">
+            <div className="mb-2 text-sm font-semibold text-muted-foreground">
+              Volg ons
+            </div>
+            <div className="flex gap-4">
+              {socialMedia.map((media) => (
+                <a
+                  key={media.href}
+                  href={media.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-border transition hover:bg-muted"
+                >
+                  <media.icon className="h-5 w-5 text-primary" />
+                  <span className="sr-only">{media.label}</span>
+                </a>
+              ))}
+            </div>
+          </div>
 
           {/* CTA Button */}
           <div className="border-t border-border p-4">
