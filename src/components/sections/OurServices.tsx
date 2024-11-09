@@ -5,10 +5,10 @@ import { ArrowRight } from "lucide-react";
 
 function OurServices() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-24 transition-colors duration-300 dark:bg-neutral-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="mb-8 text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h2 className="mb-8 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
             Onze Diensten
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -37,14 +37,16 @@ function OurServices() {
             ].map((service) => (
               <div
                 key={service.href}
-                className="rounded-lg bg-gray-50 p-6 shadow-md transition-all hover:shadow-lg"
+                className="rounded-lg bg-gray-50 p-6 shadow-md transition-shadow hover:shadow-lg dark:bg-neutral-800"
               >
-                <h3 className="mb-4 text-xl font-semibold text-gray-900">
+                <h3 className="mb-4 text-xl font-semibold text-gray-900 dark:text-white">
                   {service.title}
                 </h3>
-                <p className="mb-6 text-gray-600">{service.description}</p>
+                <p className="mb-6 text-gray-600 dark:text-gray-400">
+                  {service.description}
+                </p>
                 <Link href={service.href}>
-                  <Button className="w-full bg-orange-600 hover:bg-orange-700">
+                  <Button className="w-full bg-orange-600 hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-600">
                     Meer Info <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>

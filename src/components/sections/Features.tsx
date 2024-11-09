@@ -48,13 +48,13 @@ const features = [
 
 export function Features() {
   return (
-    <section className="bg-gray-50 py-24">
+    <section className="bg-gray-50 py-24 transition-colors duration-300 dark:bg-neutral-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
             Onze Expertise
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
+          <p className="mt-4 text-xl text-gray-600 dark:text-gray-400">
             Professionele oplossingen voor elk schilderproject
           </p>
         </div>
@@ -65,17 +65,17 @@ export function Features() {
             return (
               <div
                 key={index}
-                className="relative rounded-lg bg-white p-6 shadow-md transition-shadow hover:shadow-lg"
+                className="relative rounded-lg bg-white p-6 shadow-md transition-shadow hover:shadow-lg dark:bg-neutral-800"
               >
                 <div className="absolute -top-4 left-6">
                   <div className="inline-flex items-center justify-center rounded-md bg-orange-600 p-3 shadow-lg">
                     <Icon className="h-6 w-6 text-white" />
                   </div>
                 </div>
-                <h3 className="mt-8 text-xl font-semibold text-gray-900">
+                <h3 className="mt-8 text-xl font-semibold text-gray-900 dark:text-white">
                   {feature.title}
                 </h3>
-                <p className="mt-4 text-base text-gray-600">
+                <p className="mt-4 text-base text-gray-600 dark:text-gray-400">
                   {feature.description}
                 </p>
               </div>
