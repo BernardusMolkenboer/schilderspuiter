@@ -71,6 +71,7 @@ function VerfSpuitenHero() {
               <a
                 href="mailto:info@verfspuitenservice.nl"
                 className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-primary p-[2px] font-semibold text-white transition-all duration-300 hover:scale-105"
+                aria-label="Gratis offerte aanvragen via email"
               >
                 <span className="relative flex items-center gap-2 rounded-xl bg-background px-8 py-4">
                   <Mail className="h-5 w-5" />
@@ -78,7 +79,10 @@ function VerfSpuitenHero() {
                   <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" />
                 </span>
               </a>
-              <button className="inline-flex items-center justify-center rounded-xl border border-border bg-muted/10 px-8 py-4 font-semibold text-foreground transition-colors hover:bg-muted/20">
+              <button
+                className="inline-flex items-center justify-center rounded-xl border border-border bg-muted/10 px-8 py-4 font-semibold text-foreground transition-colors hover:bg-muted/20"
+                aria-label="Bekijk onze projecten"
+              >
                 Bekijk Onze Projecten
               </button>
             </div>
