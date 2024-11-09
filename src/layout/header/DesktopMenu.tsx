@@ -91,7 +91,11 @@ export function DesktopMenu() {
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="flex items-center gap-1 px-3 py-2">
+          <Button
+            variant="ghost"
+            className="flex items-center gap-1 px-3 py-2"
+            aria-label="Open diensten menu"
+          >
             Diensten
             <ChevronDown className="h-4 w-4" />
           </Button>
@@ -106,9 +110,9 @@ export function DesktopMenu() {
                 href={service.href}
                 className="group flex items-center gap-3 rounded-md p-2 hover:bg-muted dark:hover:bg-neutral-800"
               >
-                <service.icon className="h-5 w-5 text-primary group-hover:text-primary dark:text-primary dark:group-hover:text-primary" />
+                <service.icon className="h-5 w-5 text-primary group-hover:text-primary" />
                 <div>
-                  <div className="text-sm font-medium group-hover:text-primary dark:group-hover:text-primary">
+                  <div className="text-sm font-medium group-hover:text-primary">
                     {service.label}
                   </div>
                   <div className="text-xs text-muted-foreground dark:text-neutral-400">
@@ -130,7 +134,11 @@ export function DesktopMenu() {
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="flex items-center gap-1 px-3 py-2">
+          <Button
+            variant="ghost"
+            className="flex items-center gap-1 px-3 py-2"
+            aria-label="Open contact menu"
+          >
             Contact
             <ChevronDown className="h-4 w-4" />
           </Button>
@@ -145,9 +153,9 @@ export function DesktopMenu() {
                 href={item.href}
                 className="group flex items-start gap-3 rounded-md p-2 hover:bg-muted dark:hover:bg-neutral-800"
               >
-                <item.icon className="h-5 w-5 text-primary group-hover:text-primary dark:text-primary dark:group-hover:text-primary" />
+                <item.icon className="h-5 w-5 text-primary group-hover:text-primary" />
                 <div>
-                  <div className="text-sm font-medium group-hover:text-primary dark:group-hover:text-primary">
+                  <div className="text-sm font-medium group-hover:text-primary">
                     {item.label}
                   </div>
                   <div className="text-xs text-muted-foreground dark:text-neutral-400">
@@ -163,6 +171,7 @@ export function DesktopMenu() {
       <Button
         variant="ghost"
         size="icon"
+        aria-label="Toggle dark and light mode"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
         {theme === "dark" ? (
@@ -172,7 +181,7 @@ export function DesktopMenu() {
         )}
       </Button>
 
-      <Button asChild variant="default">
+      <Button asChild variant="default" aria-label="Offerte aanvragen">
         <Link href="/contact">Offerte Aanvragen</Link>
       </Button>
     </div>
