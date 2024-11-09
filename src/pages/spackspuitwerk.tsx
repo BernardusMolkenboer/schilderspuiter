@@ -27,6 +27,7 @@ const Spackspuitwerk = () => {
         <ServicesSection />
         <WhyUsSection />
         <TestimonialsSection />
+        <CTASection />
       </Layout>
     </>
   );
