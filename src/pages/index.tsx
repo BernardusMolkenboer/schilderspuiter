@@ -5,6 +5,8 @@ import Layout from "../layout/DefaultLayout";
 import HomeUpsSection from "@/components/home/HomeUpsSection";
 import { HeroSection } from "@/components/ui/hero-section";
 import { Features } from "@/components/sections/Features";
+import OurServices from "@/components/sections/OurServices";
+import CTASection from "@/components/sections/CTASection";
 
 const Home = () => {
   useEffect(() => {
@@ -17,13 +19,11 @@ const Home = () => {
   return (
     <>
       <Layout title="title" description="desc">
-        <HeroSection
-          title="Professioneel Schilder- en Spuitwerk"
-          description="Kwaliteit en precisie voor al uw projecten"
-          image="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80"
-        />
+        <HeroSection />
         <Features />
         <HomeUpsSection />
+        <OurServices />
+        <CTASection />
       </Layout>
     </>
   );
