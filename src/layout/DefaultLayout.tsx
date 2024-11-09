@@ -6,10 +6,10 @@ import Script from "next/script";
 export default function Layout({ children, title, description }: any) {
   return (
     <>
-      <div className="relative block w-full font-roboto">
+      <div className="font-roboto relative block w-full">
         <Head>
           <title>{title ? title : "A Brand New Company"}</title>
-          <meta name="description" content={description ? description : ""} />
+          <meta name="description" content={description || ""} />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
@@ -55,10 +55,10 @@ export default function Layout({ children, title, description }: any) {
             className="hidden"
           ></iframe>
         </noscript>
-        <main className="relative w-full overflow-x-hidden text-black dark:bg-dtmain dark:text-white">
+        <main className="relative w-full overflow-x-hidden bg-background text-foreground transition-colors">
           {children}
         </main>
-        <footer className="">
+        <footer>
           <Footer />
         </footer>
       </div>

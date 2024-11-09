@@ -84,7 +84,7 @@ export function DesktopMenu() {
     <div className="hidden items-center space-x-6 md:flex">
       <Link
         href="/"
-        className="text-sm font-medium transition-colors hover:text-primary"
+        className="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/80"
       >
         Home
       </Link>
@@ -101,12 +101,12 @@ export function DesktopMenu() {
             <DropdownMenuItem key={service.href} asChild>
               <Link
                 href={service.href}
-                className="flex items-center gap-3 rounded-md p-2 hover:bg-muted"
+                className="flex items-center gap-3 rounded-md p-2 hover:bg-muted dark:hover:bg-muted/50"
               >
-                <service.icon className="h-5 w-5 text-primary" />
+                <service.icon className="h-5 w-5 text-primary dark:text-primary/80" />
                 <div>
                   <div className="text-sm font-medium">{service.label}</div>
-                  <div className="text-xs text-muted-foreground">
+                  <div className="text-xs text-muted-foreground dark:text-muted">
                     {service.description}
                   </div>
                 </div>
@@ -118,7 +118,7 @@ export function DesktopMenu() {
 
       <Link
         href="/over-ons"
-        className="text-sm font-medium transition-colors hover:text-primary"
+        className="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/80"
       >
         Over Ons
       </Link>
@@ -135,12 +135,12 @@ export function DesktopMenu() {
             <DropdownMenuItem key={item.href} asChild>
               <Link
                 href={item.href}
-                className="flex items-start gap-3 rounded-md p-2 hover:bg-muted"
+                className="flex items-start gap-3 rounded-md p-2 hover:bg-muted dark:hover:bg-muted/50"
               >
-                <item.icon className="h-5 w-5 text-primary" />
+                <item.icon className="h-5 w-5 text-primary dark:text-primary/80" />
                 <div>
                   <div className="text-sm font-medium">{item.label}</div>
-                  <div className="text-xs text-muted-foreground">
+                  <div className="text-xs text-muted-foreground dark:text-muted">
                     {item.info}
                   </div>
                 </div>
