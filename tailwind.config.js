@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
 
 module.exports = {
-  darkMode: "class", // Enable dark mode support
+  darkMode: "class", // Enable dark mode support with class strategy
   content: ["./src/**/*.{js,jsx,ts,tsx}"], // Define the paths to all of your template files
   theme: {
     extend: {
@@ -11,9 +10,6 @@ module.exports = {
         sans: ["Work Sans", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: colors.teal,
-        secondary: colors.orange,
-        neutral: colors.gray,
         white: "#ffffff",
         black: "#000000",
 
@@ -50,13 +46,6 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        chart: {
-          1: "hsl(var(--chart-1))",
-          2: "hsl(var(--chart-2))",
-          3: "hsl(var(--chart-3))",
-          4: "hsl(var(--chart-4))",
-          5: "hsl(var(--chart-5))",
-        },
       },
       backgroundImage: {
         "gradient-to-r": "linear-gradient(to right, var(--tw-gradient-stops))",

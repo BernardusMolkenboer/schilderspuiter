@@ -96,17 +96,22 @@ export function DesktopMenu() {
             <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-[240px]">
+        <DropdownMenuContent
+          align="end"
+          className="w-[240px] rounded-md bg-white text-black shadow-md dark:bg-neutral-900 dark:text-white"
+        >
           {services.map((service) => (
             <DropdownMenuItem key={service.href} asChild>
               <Link
                 href={service.href}
-                className="flex items-center gap-3 rounded-md p-2 hover:bg-muted dark:hover:bg-muted/50"
+                className="group flex items-center gap-3 rounded-md p-2 hover:bg-muted dark:hover:bg-neutral-800"
               >
-                <service.icon className="h-5 w-5 text-primary dark:text-primary/80" />
+                <service.icon className="h-5 w-5 text-primary group-hover:text-primary dark:text-primary dark:group-hover:text-primary" />
                 <div>
-                  <div className="text-sm font-medium">{service.label}</div>
-                  <div className="text-xs text-muted-foreground dark:text-muted">
+                  <div className="text-sm font-medium group-hover:text-primary dark:group-hover:text-primary">
+                    {service.label}
+                  </div>
+                  <div className="text-xs text-muted-foreground dark:text-neutral-400">
                     {service.description}
                   </div>
                 </div>
@@ -130,17 +135,22 @@ export function DesktopMenu() {
             <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-[240px]">
+        <DropdownMenuContent
+          align="end"
+          className="w-[240px] rounded-md bg-white text-black shadow-md dark:bg-neutral-900 dark:text-white"
+        >
           {contactInfo.map((item) => (
             <DropdownMenuItem key={item.href} asChild>
               <Link
                 href={item.href}
-                className="flex items-start gap-3 rounded-md p-2 hover:bg-muted dark:hover:bg-muted/50"
+                className="group flex items-start gap-3 rounded-md p-2 hover:bg-muted dark:hover:bg-neutral-800"
               >
-                <item.icon className="h-5 w-5 text-primary dark:text-primary/80" />
+                <item.icon className="h-5 w-5 text-primary group-hover:text-primary dark:text-primary dark:group-hover:text-primary" />
                 <div>
-                  <div className="text-sm font-medium">{item.label}</div>
-                  <div className="text-xs text-muted-foreground dark:text-muted">
+                  <div className="text-sm font-medium group-hover:text-primary dark:group-hover:text-primary">
+                    {item.label}
+                  </div>
+                  <div className="text-xs text-muted-foreground dark:text-neutral-400">
                     {item.info}
                   </div>
                 </div>
