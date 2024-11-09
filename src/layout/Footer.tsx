@@ -13,7 +13,7 @@ import {
 function Footer() {
   return (
     <footer className="bg-muted/50">
-      <div className="container mx-auto px-4 py-12">
+      <div className="mx-auto max-w-screen-xl px-6 py-12">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           {/* Branding Section */}
           <div className="space-y-4">
