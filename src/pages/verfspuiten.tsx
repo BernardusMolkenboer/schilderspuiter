@@ -12,6 +12,7 @@ import WhyUsSection from "@/components/sections/WhyUsSection";
 import ServicesSection from "@/components/sections/ServiceSection";
 import TestimonialsSection from "@/components/sections/TestimonialSection";
 import VerfSpuitenHero from "@/components/sections/VerfSpuitenHero";
+import BenefitsSection from "@/components/sections/BenefitsSection";
 
 const Verfspuiten = () => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const Verfspuiten = () => {
     <>
       <Layout title="title" description="desc">
         <VerfSpuitenHero />
+        <BenefitsSection />
       </Layout>
     </>
   );
