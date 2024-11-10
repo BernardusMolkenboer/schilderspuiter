@@ -8,7 +8,7 @@ export default function ContactHero() {
         <div className="absolute left-1/2 top-0 h-[1000px] w-[1000px] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute bottom-0 right-0 h-[800px] w-[800px] rounded-full bg-secondary/10 blur-3xl" />
       </div>
-      <div className="container relative z-10 mx-auto px-6">
+      <div className="relative z-10 mx-auto max-w-screen-xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mb-6 text-4xl font-bold text-foreground md:text-5xl">
             Neem Contact Met Ons Op
