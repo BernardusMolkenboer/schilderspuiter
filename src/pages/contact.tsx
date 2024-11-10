@@ -10,7 +10,7 @@ export default function ContactPage() {
       description="Wij staan klaar om u te helpen bij al uw vragen en projecten."
     >
       <ContactHero />
-      <section className="container mx-auto my-16 grid gap-12 px-6 lg:grid-cols-2 lg:gap-24">
+      <section className="mx-auto my-16 grid max-w-screen-xl gap-12 lg:grid-cols-2 lg:gap-24">
         <ContactForm />
         <ContactDetails />
       </section>
