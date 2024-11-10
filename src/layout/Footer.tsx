@@ -92,8 +92,8 @@ function Footer() {
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-2">
-                <MapPin className="h-5 w-5 text-primary dark:text-teal-400" />
-                <span className="text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-teal-400">
+                <MapPin className="h-5 w-5 text-primary dark:text-primary" />
+                <span className="text-gray-600 dark:text-gray-400">
                   Rijnstraat 42
                   <br />
                   8226 LS Lelystad, Nederland
