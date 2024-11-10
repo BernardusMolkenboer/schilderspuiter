@@ -102,7 +102,7 @@ function Footer() {
               <li className="flex items-center gap-2">
                 <Phone className="h-5 w-5 text-primary" />
                 <span className="text-gray-600 dark:text-gray-400">
-                  +31 (0)6 12345678
+                  +31 (0)85 2129613
                 </span>
               </li>
               <li className="flex items-center gap-2">

@@ -68,14 +68,14 @@ export default function ContactDetails() {
             {
               icon: Phone,
               title: "Telefoon",
-              content: "+31 6 12345678",
-              link: "tel:+31612345678",
+              content: "+31 (0)85 2129613",
+              link: "tel:+31852129613",
             },
             {
               icon: Mail,
               title: "Email",
-              content: "info@spackspuitenservice.nl",
-              link: "mailto:info@spackspuitenservice.nl",
+              content: "info@schilder-spuiter.nl",
+              link: "mailto:info@schilder-spuiter.nl",
             },
             {
               icon: MapPin,

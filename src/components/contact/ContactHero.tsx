@@ -22,8 +22,8 @@ export default function ContactHero() {
               {
                 icon: Phone,
                 title: "Bel Ons",
-                info: "+31 6 12345678",
-                link: "tel:+31612345678",
+                info: "+31 (0)85 2129613",
+                link: "tel:+31852129613",
               },
               {
                 icon: Mail,
