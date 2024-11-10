@@ -28,8 +28,8 @@ export default function ContactHero() {
               {
                 icon: Mail,
                 title: "Email",
-                info: "info@spackspuitenservice.nl",
-                link: "mailto:info@spackspuitenservice.nl",
+                info: "info@schilder-spuiter.nl",
+                link: "mailto:info@schilder-spuiter.nl",
               },
               {
                 icon: Clock,
