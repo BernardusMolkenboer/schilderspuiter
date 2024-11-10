@@ -2,7 +2,7 @@ import { Mail, Phone, Clock } from "lucide-react";
 
 export default function ContactHero() {
   return (
-    <section className="relative bg-background py-24 transition-colors duration-300">
+    <section className="relative bg-background pb-24 pt-40 transition-colors duration-300">
       {/* Decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute left-1/2 top-0 h-[1000px] w-[1000px] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
