@@ -80,7 +80,8 @@ export default function ContactDetails() {
             {
               icon: MapPin,
               title: "Adres",
-              content: "Straatnaam 123, 1234 AB Amsterdam",
+              content: "Flevoland, Rijnstraat 42, 8226 LS Lelystad, Nederland",
+              link: "https://www.google.com/maps?q=Flevoland,+Rijnstraat+42,+8226+LS+Lelystad,+Netherlands",
             },
             {
               icon: Clock,
@@ -99,6 +100,8 @@ export default function ContactDetails() {
                 {item.link ? (
                   <a
                     href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {item.content}
@@ -138,7 +141,7 @@ export default function ContactDetails() {
                       key={locIndex}
                       className="flex items-center text-muted-foreground hover:text-foreground"
                     >
-                      <ArrowRight className="mr-2 h-4 w-4" />
+                      <ArrowRight className="mr-2 h-4 w-4 text-primary" />
                       {location}
                     </li>
                   ))}
