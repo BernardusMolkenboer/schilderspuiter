@@ -22,7 +22,10 @@ const Spackspuitwerk = () => {
 
   return (
     <>
-      <Layout title="title" description="desc">
+      <Layout
+        title="Spackspuitwerk Specialist | Strakke en Duurzame Afwerking"
+        description="Professioneel spackspuiten voor wanden en plafonds. Meer dan 20 jaar ervaring in strakke en duurzame muur- en plafondafwerking. Vraag nu een vrijblijvende offerte aan!"
+      >
         <SpackspuitenHero />
         <ServicesSection />
         <WhyUsSection />

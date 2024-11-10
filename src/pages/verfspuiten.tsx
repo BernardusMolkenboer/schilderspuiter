@@ -26,7 +26,10 @@ const Verfspuiten = () => {
 
   return (
     <>
-      <Layout title="title" description="desc">
+      <Layout
+        title="Professioneel Verfspuiten | Strakke en Duurzame Afwerking"
+        description="Transformeer uw ruimte met professioneel verfspuiten. Ontdek de voordelen van onze geavanceerde spuittechnieken: strakke afwerking, snelle uitvoering en duurzame resultaten. Vraag een vrijblijvende offerte aan!"
+      >
         <VerfSpuitenHero />
         <BenefitsSection />
         <ProcessSection />

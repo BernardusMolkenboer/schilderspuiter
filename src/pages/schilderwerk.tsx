@@ -16,7 +16,7 @@ import SchilderwerkHero from "@/components/sections/SchilderwerkHero";
 import ServicesGrid from "@/components/sections/ServiceGrid";
 import ProcessTimeline from "@/components/schilderwerken/ProcessTimeline";
 
-const Spackspuitwerk = () => {
+const Schilderwerk = () => {
   useEffect(() => {
     const mainDataLayer = {
       pageTypeName: "title",
@@ -26,7 +26,10 @@ const Spackspuitwerk = () => {
 
   return (
     <>
-      <Layout title="title" description="desc">
+      <Layout
+        title="Professioneel Schilderwerk | 20+ Jaar Vakmanschap"
+        description="Ontdek het verschil van traditioneel schilderwerk. Wij bieden maatwerk, hoogwaardige verf, kleuradvies en vakmanschap met meer dan 30 jaar ervaring. Vraag nu een vrijblijvende offerte aan!"
+      >
         <SchilderwerkHero />
         <ColorSection />
         <ServicesGrid />
@@ -37,4 +40,4 @@ const Spackspuitwerk = () => {
   );
 };
 
-export default Spackspuitwerk;
+export default Schilderwerk;

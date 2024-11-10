@@ -18,7 +18,10 @@ const Home = () => {
 
   return (
     <>
-      <Layout title="title" description="desc">
+      <Layout
+        title="Professioneel Schilder- en Spuitwerk | Schilder-Spuiter.nl"
+        description="Transformeer uw ruimte met onze professionele schilder- en spuitwerkdiensten. Wij bieden vakmanschap, snelle service en hoogwaardige resultaten voor particuliere en zakelijke projecten."
+      >
         <HeroSection />
         <Features />
         <HomeUpsSection />
