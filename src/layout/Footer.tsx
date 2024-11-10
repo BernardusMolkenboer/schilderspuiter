@@ -14,7 +14,7 @@ import {
 
 function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-white to-gray-50 text-black dark:bg-gray-900 dark:text-gray-300">
+    <footer className="bg-gradient-to-br from-white to-gray-50 text-black dark:from-[#151515] dark:to-[#151515] dark:text-gray-300">
       <div className="mx-auto max-w-screen-xl px-6 py-12">
         {/* Top Section */}
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
@@ -40,21 +40,21 @@ function Footer() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full border-gray-300 text-gray-500 hover:border-black hover:text-black dark:border-gray-600 dark:text-gray-400 dark:hover:border-white dark:hover:text-white"
+                className="rounded-full border-gray-300 text-primary hover:border-primary hover:text-primary dark:border-gray-600 dark:hover:border-primary dark:hover:text-primary"
               >
                 <Facebook className="h-5 w-5" />
               </Button>
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full border-gray-300 text-gray-500 hover:border-black hover:text-black dark:border-gray-600 dark:text-gray-400 dark:hover:border-white dark:hover:text-white"
+                className="rounded-full border-gray-300 text-primary hover:border-primary hover:text-primary dark:border-gray-600 dark:hover:border-primary dark:hover:text-primary"
               >
                 <Instagram className="h-5 w-5" />
               </Button>
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full border-gray-300 text-gray-500 hover:border-black hover:text-black dark:border-gray-600 dark:text-gray-400 dark:hover:border-white dark:hover:text-white"
+                className="rounded-full border-gray-300 text-primary hover:border-primary hover:text-primary dark:border-gray-600 dark:hover:border-primary dark:hover:text-primary"
               >
                 <Linkedin className="h-5 w-5" />
               </Button>
@@ -76,7 +76,7 @@ function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-gray-600 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-white"
+                    className="text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
                   >
                     {label}
                   </Link>
@@ -92,7 +92,7 @@ function Footer() {
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-2">
-                <MapPin className="h-5 w-5 text-primary dark:text-teal-400" />
+                <MapPin className="h-5 w-5 text-primary" />
                 <span className="text-gray-600 dark:text-gray-400">
                   Voorbeeldstraat 123
                   <br />
@@ -100,13 +100,13 @@ function Footer() {
                 </span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="h-5 w-5 text-primary dark:text-teal-400" />
+                <Phone className="h-5 w-5 text-primary" />
                 <span className="text-gray-600 dark:text-gray-400">
                   +31 (0)6 12345678
                 </span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="h-5 w-5 text-primary dark:text-teal-400" />
+                <Mail className="h-5 w-5 text-primary" />
                 <span className="text-gray-600 dark:text-gray-400">
                   info@schilder-spuiter.nl
                 </span>
@@ -129,7 +129,7 @@ function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-gray-600 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-white"
+                    className="text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
                   >
                     {label}
                   </Link>
