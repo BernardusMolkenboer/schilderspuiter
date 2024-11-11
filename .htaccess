@@ -1,4 +1,0 @@
-ErrorDocument 404 https://www.abn.company/page-not-found
-RewriteEngine On
-RewriteRule ^blog/([^/]*)/?$ /blog/[id].tsx [NC,L]
-RewriteRule ^case/([^/]*)/?$ /case/[id].tsx [NC,L]
