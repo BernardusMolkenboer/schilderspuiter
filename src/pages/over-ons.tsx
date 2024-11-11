@@ -22,8 +22,8 @@ const OverOns = () => {
   return (
     <>
       <Layout
-        title="Exclusieve Decoratieve Verftechnieken | Luxe Afwerkingen"
-        description="Transformeer uw muren met exclusieve decoratieve verfkunst. Van Italiaanse stucco tot moderne metallic effecten, wij leveren unieke en luxueuze afwerkingen. Vraag nu een vrijblijvende offerte aan!"
+        title="Over Ons | Specialist in Luxe Schilderwerken en Vakmanschap"
+        description="Maak kennis met ons vakmanschap. Ontdek onze passie voor luxe schilderwerken, hoogwaardige afwerkingen, en innovatieve technieken. Wij bieden maatwerkoplossingen voor elke ruimte. Vraag een offerte aan en ervaar kwaliteit."
       >
         <HeroSection />
         <MissionStatement />
