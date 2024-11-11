@@ -7,6 +7,9 @@ import SpecialPaintHero from "@/components/speciaalschilderwerk/SpeciaalSchilder
 import FeaturedTechniques from "@/components/speciaalschilderwerk/FeaturedTechniques";
 import ExpertiseSection from "@/components/speciaalschilderwerk/ExpertiseSection";
 import { HeroSection } from "@/components/overons/HeroSection";
+import MissionStatement from "@/components/overons/MissionStatement";
+import ServicesGrid from "@/components/sections/ServiceGrid";
+import MethodSection from "@/components/overons/MethodSection";
 
 const OverOns = () => {
   useEffect(() => {
@@ -23,6 +26,9 @@ const OverOns = () => {
         description="Transformeer uw muren met exclusieve decoratieve verfkunst. Van Italiaanse stucco tot moderne metallic effecten, wij leveren unieke en luxueuze afwerkingen. Vraag nu een vrijblijvende offerte aan!"
       >
         <HeroSection />
+        <MissionStatement />
+        <ServicesGrid />
+        <MethodSection />
         <CTASection />
       </Layout>
     </>

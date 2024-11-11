@@ -81,10 +81,10 @@ function ServicesGrid() {
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent dark:from-black/60 dark:via-black/30"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
                   <service.icon className="mb-2 h-8 w-8 text-primary" />
-                  <h3 className="text-2xl font-bold text-white dark:text-white/90">
+                  <h3 className="text-2xl font-bold text-white">
                     {service.title}
                   </h3>
                 </div>

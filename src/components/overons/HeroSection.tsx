@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <div className="relative overflow-hidden bg-background py-20">
+    <div className="relative overflow-hidden bg-background pb-20 pt-32">
       <div className="mx-auto max-w-7xl">
         <div className="relative z-10 bg-background pb-16 sm:pb-24 md:pb-32">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
