@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import LogoSchilder from "@/svg/logo";
 import LogoSchilderWit from "@/svg/logoWit";
-import { Button } from "@/components/ui/button";
 import {
   Facebook,
   Instagram,
@@ -13,6 +12,12 @@ import {
 } from "lucide-react";
 
 function Footer() {
+  const socialLinks = [
+    { icon: Facebook, link: "https://facebook.com", label: "Facebook" },
+    { icon: Instagram, link: "https://instagram.com", label: "Instagram" },
+    { icon: Linkedin, link: "https://linkedin.com", label: "LinkedIn" },
+  ];
+
   return (
     <footer className="bg-gradient-to-br from-white to-gray-50 text-black dark:from-[#151515] dark:to-[#151515] dark:text-gray-300">
       <div className="mx-auto max-w-screen-xl px-6 py-12">
@@ -37,35 +42,29 @@ function Footer() {
               vakmanschap.
             </p>
             <div className="flex space-x-4">
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-gray-300 text-primary hover:border-primary hover:text-primary dark:border-gray-600 dark:hover:border-primary dark:hover:text-primary"
-              >
-                <Facebook className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-gray-300 text-primary hover:border-primary hover:text-primary dark:border-gray-600 dark:hover:border-primary dark:hover:text-primary"
-              >
-                <Instagram className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-gray-300 text-primary hover:border-primary hover:text-primary dark:border-gray-600 dark:hover:border-primary dark:hover:text-primary"
-              >
-                <Linkedin className="h-5 w-5" />
-              </Button>
+              {socialLinks.map((social, index) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={index}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 text-primary transition-all hover:border-primary hover:text-primary dark:border-gray-600 dark:hover:border-primary dark:hover:text-primary"
+                    aria-label={social.label}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
           {/* Services Section */}
           <div>
-            <h4 className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-100">
+            <h3 className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-100">
               Diensten
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {[
                 ["Verfspuiten", "/verfspuiten"],
@@ -87,9 +86,9 @@ function Footer() {
 
           {/* Contact Section */}
           <div>
-            <h4 className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-100">
+            <h3 className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-100">
               Contact
-            </h4>
+            </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 text-primary dark:text-primary" />
@@ -117,9 +116,9 @@ function Footer() {
 
           {/* Links Section */}
           <div>
-            <h4 className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-100">
+            <h3 className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-100">
               Links
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {[
                 ["Over Ons", "/over-ons"],
