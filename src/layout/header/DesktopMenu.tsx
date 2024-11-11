@@ -54,8 +54,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Bel ons",
-    info: "+31 (0)6 12345678",
-    href: "tel:+31612345678",
+    info: "+31 (0)85 2129613",
+    href: "tel:+31852129613",
   },
   {
     icon: Mail,
