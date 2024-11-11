@@ -79,13 +79,13 @@ function ErrorSection() {
                   <span>Terug naar Home</span>
                 </span>
               </Link>
-              <a
-                href="mailto:info@spackspuitenservice.nl"
+              <Link
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-xl border border-border bg-muted/10 px-8 py-4 font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-muted/20"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Contact Opnemen
-              </a>
+              </Link>
             </div>
 
             {/* Services Section */}
