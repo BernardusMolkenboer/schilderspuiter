@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/overons/HeroSection";
 import MissionStatement from "@/components/overons/MissionStatement";
 import ServicesGrid from "@/components/sections/ServiceGrid";
 import MethodSection from "@/components/overons/MethodSection";
+import CertificationsSection from "@/components/overons/CertifiedSection";
 
 const OverOns = () => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const OverOns = () => {
         <MissionStatement />
         <ServicesGrid />
         <MethodSection />
+        <CertificationsSection />
         <CTASection />
       </Layout>
     </>
