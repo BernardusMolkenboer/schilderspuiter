@@ -54,7 +54,7 @@ const services = [
 function ServicesGrid() {
   return (
     <section className="bg-background py-24">
-      <div className="container mx-auto px-6">
+      <div className="mx-auto max-w-screen-xl px-6">
         {/* Section Header */}
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <h2 className="mb-6 text-4xl font-bold text-foreground">
