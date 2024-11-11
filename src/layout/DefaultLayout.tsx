@@ -1,9 +1,34 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import Footer from "@/layout/Footer";
 import Header from "@/layout/Header";
-import Script from "next/script";
 
 export default function Layout({ children, title, description }: any) {
+  useEffect(() => {
+    const handleLoadGTM = () => {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtm.js?id=${process.env.NEXT_PUBLIC_GTM_TRACKING_ID}`;
+      document.head.appendChild(script);
+
+      const noscript = document.createElement("noscript");
+      noscript.innerHTML = `
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_TRACKING_ID}"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden"
+        ></iframe>
+      `;
+      document.body.appendChild(noscript);
+    };
+
+    window.addEventListener("scroll", handleLoadGTM, { once: true });
+    return () => {
+      window.removeEventListener("scroll", handleLoadGTM);
+    };
+  }, []);
+
   return (
     <>
       <div className="font-roboto relative block w-full">
@@ -31,24 +56,7 @@ export default function Layout({ children, title, description }: any) {
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="theme-color" content="#ffffff" />
         </Head>
-        <Script id="google-tag-manager" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_TRACKING_ID}');
-          `}
-        </Script>
         <Header />
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PFC7VJR7"
-            height="0"
-            width="0"
-            className="hidden"
-          ></iframe>
-        </noscript>
         <main className="relative w-full overflow-x-hidden bg-background text-foreground transition-colors">
           {children}
         </main>
