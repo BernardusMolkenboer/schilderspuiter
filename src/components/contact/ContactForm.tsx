@@ -5,6 +5,7 @@ import { Send, Loader2 } from "lucide-react";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [resultMessage, setResultMessage] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,14 +17,56 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setResultMessage(null);
+
+    const payload = {
+      fields: [
+        { name: "name", value: formData.name },
+        { name: "email", value: formData.email },
+        { name: "phone", value: formData.phone },
+        { name: "service", value: formData.service },
+        { name: "message", value: formData.message },
+      ],
+      context: {
+        pageUri: window.location.href,
+        pageName: document.title,
+      },
+    };
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-      alert("Bedankt! Uw bericht is verzonden.");
+      const response = await fetch(
+        `https://api.hsforms.com/submissions/v3/integration/submit/${process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID}/${process.env.NEXT_PUBLIC_HUBSPOT_CONTACT_FORM_GUID}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${process.env.HUBSPOT_API_KEY}`,
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      if (response.ok) {
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+        setResultMessage("Bedankt! Uw bericht is succesvol verzonden.");
+      } else {
+        const errorData = await response.json();
+        console.error("Error response from HubSpot:", errorData);
+        setResultMessage(
+          "Er is iets misgegaan bij het verzenden van uw bericht. Probeer het opnieuw."
+        );
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Er is iets misgegaan. Probeer het opnieuw.");
+      setResultMessage(
+        "Er is een onverwachte fout opgetreden. Probeer het later opnieuw."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -51,7 +94,6 @@ export default function ContactForm() {
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="space-y-4">
-          {/* Name Field */}
           <div>
             <label
               htmlFor="name"
@@ -70,8 +112,6 @@ export default function ContactForm() {
               placeholder="Uw volledige naam"
             />
           </div>
-
-          {/* Email and Phone Fields */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <div>
               <label
@@ -109,8 +149,6 @@ export default function ContactForm() {
               />
             </div>
           </div>
-
-          {/* Service Field */}
           <div>
             <label
               htmlFor="service"
@@ -133,8 +171,6 @@ export default function ContactForm() {
               <option value="speciaal">Speciale Technieken</option>
             </select>
           </div>
-
-          {/* Message Field */}
           <div>
             <label
               htmlFor="message"
@@ -154,8 +190,6 @@ export default function ContactForm() {
             />
           </div>
         </div>
-
-        {/* Submit Button */}
         <button
           type="submit"
           disabled={isSubmitting}
@@ -174,6 +208,18 @@ export default function ContactForm() {
           )}
         </button>
       </form>
+
+      {resultMessage && (
+        <div
+          className={`mt-4 rounded-xl p-4 ${
+            resultMessage.includes("succesvol")
+              ? "bg-green-100 text-green-700"
+              : "bg-red-100 text-red-700"
+          }`}
+        >
+          {resultMessage}
+        </div>
+      )}
     </div>
   );
 }
