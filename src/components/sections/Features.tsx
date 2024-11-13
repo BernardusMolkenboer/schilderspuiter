@@ -49,7 +49,7 @@ const features = [
 export function Features() {
   return (
     <section className="bg-gray-50 py-24 transition-colors duration-300 dark:bg-neutral-900">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
             Onze Expertise
