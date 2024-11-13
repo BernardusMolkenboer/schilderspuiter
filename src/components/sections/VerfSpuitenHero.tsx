@@ -7,7 +7,9 @@ import {
   CheckCircle2,
   Paintbrush,
   Droplet,
+  Phone,
 } from "lucide-react";
+import Link from "next/link";
 
 function VerfSpuitenHero() {
   return (
@@ -19,7 +21,7 @@ function VerfSpuitenHero() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-4 pb-20 pt-20 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-32 sm:px-6 lg:px-8">
         {/* Top badge */}
         <div className="mb-8 flex justify-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/10 px-3 py-2 backdrop-blur-sm">
@@ -68,21 +70,21 @@ function VerfSpuitenHero() {
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-4">
-              <a
-                href="mailto:info@verfspuitenservice.nl"
+              <Link
+                href="/contact"
                 className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-white shadow-lg transition-all duration-300 hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 <Mail className="h-5 w-5" />
-                <span>Gratis Offerte</span>
+                <span>Neem contact op</span>
                 <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" />
-              </a>
-              <a
-                href="#projects"
+              </Link>
+              <Link
+                href="tel:+31852129613"
                 className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-8 py-4 text-foreground shadow transition-colors hover:bg-muted hover:text-primary focus:ring-2 focus:ring-muted focus:ring-offset-2"
               >
-                <ArrowRight className="h-5 w-5" />
-                <span>Bekijk Onze Projecten</span>
-              </a>
+                <Phone className="h-5 w-5" />
+                Bel Direct
+              </Link>
             </div>
           </div>
 

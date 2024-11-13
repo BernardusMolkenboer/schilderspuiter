@@ -10,6 +10,7 @@ import {
   Phone,
   CheckCircle2,
 } from "lucide-react";
+import Link from "next/link";
 
 function SchilderwerkHero() {
   return (
@@ -36,7 +37,7 @@ function SchilderwerkHero() {
 
         <div className="flex flex-col items-center justify-between gap-12 lg:flex-row">
           {/* Left content */}
-          <div className="space-y-8 lg:w-1/2">
+          <div className="mt-10 space-y-8 lg:w-1/2">
             <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl">
               Traditioneel
               <div className="relative mt-2 inline-block">
@@ -96,21 +97,21 @@ function SchilderwerkHero() {
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-4">
-              <a
-                href="mailto:info@schilderwerk.nl"
+              <Link
+                href="/contact"
                 className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-white shadow-lg transition-all duration-300 hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 <Mail className="h-5 w-5" />
-                Gratis Offerte
+                <span>Neem contact op</span>
                 <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" />
-              </a>
-              <a
-                href="tel:+31612345678"
+              </Link>
+              <Link
+                href="tel:+31852129613"
                 className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-8 py-4 text-foreground shadow transition-colors hover:bg-muted hover:text-primary focus:ring-2 focus:ring-muted focus:ring-offset-2"
               >
                 <Phone className="h-5 w-5" />
                 Bel Direct
-              </a>
+              </Link>
             </div>
 
             {/* Trust indicators */}
