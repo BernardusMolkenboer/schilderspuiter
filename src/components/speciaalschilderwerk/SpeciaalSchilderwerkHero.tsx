@@ -1,21 +1,22 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Mail, ArrowRight, Star, Palette, Sparkles, Crown } from "lucide-react";
 
 function SpecialPaintHero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-background transition-colors duration-300">
+    <section className="relative overflow-hidden bg-background pb-24 pt-32">
       {/* Animated background blobs */}
-      <div className="absolute inset-0">
-        <div className="animate-blob absolute -left-4 top-0 h-96 w-96 rounded-full bg-primary/10 opacity-70 mix-blend-multiply blur-3xl filter"></div>
-        <div className="animate-blob animation-delay-2000 absolute -right-4 top-0 h-96 w-96 rounded-full bg-secondary/10 opacity-70 mix-blend-multiply blur-3xl filter"></div>
-        <div className="animate-blob animation-delay-4000 absolute -bottom-8 left-20 h-96 w-96 rounded-full bg-accent/10 opacity-70 mix-blend-multiply blur-3xl filter"></div>
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -left-4 top-0 h-96 w-96 rounded-full bg-primary/10 opacity-70 mix-blend-multiply blur-3xl" />
+        <div className="absolute -right-4 top-0 h-96 w-96 rounded-full bg-secondary/10 opacity-70 mix-blend-multiply blur-3xl" />
+        <div className="absolute -bottom-8 left-20 h-96 w-96 rounded-full bg-accent/10 opacity-70 mix-blend-multiply blur-3xl" />
       </div>
 
-      <div className="container relative z-10 mx-auto max-w-screen-xl px-6 pb-20 pt-32">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Top badge */}
-        <div className="mb-12 flex justify-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/10 p-2 pl-3 pr-6 backdrop-blur-sm">
+        <div className="mb-8 flex justify-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/10 px-3 py-2 backdrop-blur-sm">
             <span className="flex items-center gap-1 rounded-full bg-primary px-3 py-1 text-sm font-medium text-white">
               <Crown className="h-4 w-4" />
               Exclusief
@@ -26,15 +27,15 @@ function SpecialPaintHero() {
           </div>
         </div>
 
-        <div className="grid items-center gap-16 lg:grid-cols-2">
+        <div className="flex flex-col items-center justify-between gap-12 lg:flex-row">
           {/* Left content */}
-          <div className="space-y-8">
-            <h1 className="text-6xl font-bold text-foreground md:text-7xl">
+          <div className="space-y-8 lg:w-1/2">
+            <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl">
               <span>Exclusieve</span>
               <div className="mt-2">Decoratieve Verfkunst</div>
             </h1>
 
-            <p className="text-xl leading-relaxed text-muted-foreground">
+            <p className="text-base text-muted-foreground sm:max-w-xl sm:text-lg">
               Transformeer uw ruimte met onze exclusieve decoratieve
               verftechnieken. Van Italiaanse stucco tot moderne metallic
               effecten, wij creëren unieke kunstwerken op uw muren.
@@ -61,28 +62,27 @@ function SpecialPaintHero() {
             </div>
 
             {/* CTA buttons */}
-            <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-              <a
-                href="mailto:info@schilder-spuiter.nl"
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-primary px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-primary/90"
-                aria-label="Vraag een offerte aan via email"
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-white shadow-lg transition-all duration-300 hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 <Mail className="h-5 w-5" />
                 <span>Vraag Een Offerte</span>
                 <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" />
-              </a>
-              <a
-                href="#portfolio"
-                className="inline-flex items-center justify-center rounded-xl border border-border bg-muted/10 px-8 py-4 font-semibold text-foreground transition-colors hover:bg-muted/20"
-                aria-label="Bekijk ons portfolio"
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-8 py-4 text-foreground shadow transition-colors hover:bg-muted hover:text-primary focus:ring-2 focus:ring-muted focus:ring-offset-2"
               >
-                Bekijk Ons Portfolio
-              </a>
+                <ArrowRight className="h-5 w-5" />
+                <span>Bekijk Ons Portfolio</span>
+              </Link>
             </div>
           </div>
 
           {/* Right content - Image grid */}
-          <div className="relative">
+          <div className="relative lg:w-1/2">
             <div className="grid grid-cols-12 gap-4">
               <div className="col-span-7">
                 <div className="relative h-[500px] overflow-hidden rounded-2xl">
@@ -127,7 +127,7 @@ function SpecialPaintHero() {
                   key={index}
                   className="flex flex-col items-center justify-center rounded-xl border border-border bg-muted/10 p-4"
                 >
-                  <span className="mb-1 text-2xl font-bold text-foreground">
+                  <span className="mb-1 text-3xl font-bold text-foreground">
                     {stat.number}
                   </span>
                   <span className="text-sm text-muted-foreground">

@@ -13,7 +13,7 @@ import {
 
 function SchilderwerkHero() {
   return (
-    <section className="relative min-h-screen bg-background transition-colors duration-300">
+    <section className="relative overflow-hidden bg-background pb-24 pt-32">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute left-1/2 top-0 h-[1000px] w-[1000px] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
@@ -21,10 +21,10 @@ function SchilderwerkHero() {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 mx-auto max-w-screen-xl px-6 pt-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Experience badge */}
-        <div className="mb-12 flex justify-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-muted/20 bg-muted/10 p-1.5 pl-2 pr-6 backdrop-blur-sm">
+        <div className="mb-8 flex justify-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-muted/20 bg-muted/10 px-3 py-2 backdrop-blur-sm">
             <span className="rounded-full bg-primary px-3 py-1 text-sm font-medium text-white">
               Vakmanschap
             </span>
@@ -34,10 +34,10 @@ function SchilderwerkHero() {
           </div>
         </div>
 
-        <div className="grid items-center gap-12 lg:grid-cols-12">
+        <div className="flex flex-col items-center justify-between gap-12 lg:flex-row">
           {/* Left content */}
-          <div className="space-y-8 lg:col-span-6">
-            <h1 className="text-6xl font-bold text-foreground md:text-7xl">
+          <div className="space-y-8 lg:w-1/2">
+            <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl">
               Traditioneel
               <div className="relative mt-2 inline-block">
                 <span className="relative z-10 text-primary">Schilderwerk</span>
@@ -45,7 +45,8 @@ function SchilderwerkHero() {
               </div>
               <div className="mt-2 text-muted-foreground">met Passie</div>
             </h1>
-            <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
+
+            <p className="text-base text-muted-foreground sm:max-w-xl sm:text-lg">
               Ontdek het verschil van echt vakmanschap. Van klassieke technieken
               tot moderne afwerkingen, wij brengen uw visie tot leven met
               precisie en toewijding.
@@ -94,23 +95,21 @@ function SchilderwerkHero() {
             </div>
 
             {/* CTA buttons */}
-            <div className="flex flex-col gap-4 pt-6 sm:flex-row">
+            <div className="flex flex-wrap gap-4">
               <a
                 href="mailto:info@schilderwerk.nl"
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-primary font-semibold text-white transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-white shadow-lg transition-all duration-300 hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
-                <span className="relative flex items-center gap-2 rounded-xl bg-background px-8 py-4">
-                  <Mail className="h-5 w-5" />
-                  <span>Gratis Offerte</span>
-                  <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" />
-                </span>
+                <Mail className="h-5 w-5" />
+                Gratis Offerte
+                <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href="tel:+31612345678"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-muted/20 bg-muted/10 px-8 py-4 font-semibold text-foreground transition-colors hover:bg-muted/20"
+                className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-8 py-4 text-foreground shadow transition-colors hover:bg-muted hover:text-primary focus:ring-2 focus:ring-muted focus:ring-offset-2"
               >
                 <Phone className="h-5 w-5" />
-                <span>Bel Direct</span>
+                Bel Direct
               </a>
             </div>
 
@@ -138,7 +137,7 @@ function SchilderwerkHero() {
           </div>
 
           {/* Right content - Image showcase */}
-          <div className="lg:col-span-6">
+          <div className="relative lg:w-1/2">
             <div className="grid grid-cols-12 gap-4">
               <div className="col-span-8">
                 <div className="relative h-[500px] overflow-hidden rounded-2xl">
@@ -183,7 +182,7 @@ function SchilderwerkHero() {
                   key={index}
                   className="flex flex-col items-center justify-center rounded-xl border border-muted/20 bg-muted/10 p-4"
                 >
-                  <span className="mb-1 text-2xl font-bold text-primary">
+                  <span className="mb-1 text-3xl font-bold text-foreground">
                     {stat.number}
                   </span>
                   <span className="text-sm text-muted-foreground">
