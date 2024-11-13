@@ -58,7 +58,7 @@ export function HeroSection() {
                       <ArrowRight className="h-4 w-4" />
                     </Button>
                   </Link>
-                  <Link href="/diensten">
+                  <Link href="#diensten">
                     <Button size="lg" variant="outline">
                       Onze Diensten
                     </Button>

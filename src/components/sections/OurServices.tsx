@@ -5,7 +5,10 @@ import { ArrowRight } from "lucide-react";
 
 function OurServices() {
   return (
-    <section className="bg-white py-24 transition-colors duration-300 dark:bg-neutral-900">
+    <section
+      className="bg-white py-24 transition-colors duration-300 dark:bg-neutral-900"
+      id="diensten"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="mb-8 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
