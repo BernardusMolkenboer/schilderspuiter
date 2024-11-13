@@ -1,7 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, ArrowRight, Star, Palette, Sparkles, Crown } from "lucide-react";
+import {
+  Mail,
+  ArrowRight,
+  Phone,
+  Star,
+  Palette,
+  Sparkles,
+  Crown,
+} from "lucide-react";
 
 function SpecialPaintHero() {
   return (
@@ -68,15 +76,15 @@ function SpecialPaintHero() {
                 className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-white shadow-lg transition-all duration-300 hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 <Mail className="h-5 w-5" />
-                <span>Vraag Een Offerte</span>
+                <span>Neem contact op</span>
                 <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
-                href="/contact"
+                href="tel:+31852129613"
                 className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-8 py-4 text-foreground shadow transition-colors hover:bg-muted hover:text-primary focus:ring-2 focus:ring-muted focus:ring-offset-2"
               >
-                <ArrowRight className="h-5 w-5" />
-                <span>Bekijk Ons Portfolio</span>
+                <Phone className="h-5 w-5" />
+                Bel Direct
               </Link>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Mail, ArrowRight, Shield, Trophy, Clock } from "lucide-react";
+import { Mail, ArrowRight, Phone, Shield, Trophy, Clock } from "lucide-react";
 import Link from "next/link";
 
 export default function SpackspuitenHero() {
@@ -29,19 +29,22 @@ export default function SpackspuitenHero() {
                   in hoogwaardige resultaten.
                 </p>
 
+                {/* CTA buttons */}
                 <div className="flex flex-wrap gap-4">
-                  <Link href="mailto:info@spackspuitenservice.nl">
-                    <button className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-white shadow-lg hover:bg-primary/90">
-                      <Mail className="h-5 w-5" />
-                      Vraag Een Offerte Aan
-                      <ArrowRight className="h-5 w-5" />
-                    </button>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-white shadow-lg transition-all duration-300 hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  >
+                    <Mail className="h-5 w-5" />
+                    <span>Neem contact op</span>
+                    <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" />
                   </Link>
-                  <Link href="tel:+31612345678">
-                    <button className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-8 py-4 text-foreground shadow hover:bg-muted">
-                      <Clock className="h-5 w-5" />
-                      Direct Contact
-                    </button>
+                  <Link
+                    href="tel:+31852129613"
+                    className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-8 py-4 text-foreground shadow transition-colors hover:bg-muted hover:text-primary focus:ring-2 focus:ring-muted focus:ring-offset-2"
+                  >
+                    <Phone className="h-5 w-5" />
+                    Bel Direct
                   </Link>
                 </div>
 
