@@ -64,7 +64,10 @@ const services = [
 
 export default function OurServices() {
   return (
-    <section className="bg-background py-24 transition-colors duration-300">
+    <section
+      className="bg-background py-24 transition-colors duration-300"
+      id="diensten"
+    >
       <div className="container mx-auto max-w-screen-xl px-6">
         {/* Section Header */}
         <div className="mx-auto mb-16 max-w-3xl text-center">
