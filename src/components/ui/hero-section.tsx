@@ -79,7 +79,7 @@ export function HeroSection() {
                   </div>
                   <div className="text-sm">
                     <p className="font-semibold text-foreground">
-                      100+ Projecten
+                      2500+ Projecten
                     </p>
                     <p className="text-muted-foreground">Succesvol afgerond</p>
                   </div>
