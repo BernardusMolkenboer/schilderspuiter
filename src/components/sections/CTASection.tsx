@@ -9,11 +9,11 @@ function CTASection() {
         {/* Section Content */}
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-6 text-4xl font-bold text-foreground">
-            Klaar voor een Professionele Verfbeurt?
+            Transformeer Uw Ruimte Vandaag
           </h2>
           <p className="mb-12 text-lg text-muted-foreground">
-            Ontvang een vrijblijvende offerte voor uw verfspuitproject en ontdek
-            het verschil van professioneel vakwerk.
+            Ontvang een vrijblijvende offerte voor uw project en ontdenk het
+            verschil van professioneel vakwerk.
           </p>
 
           {/* CTA Buttons */}
