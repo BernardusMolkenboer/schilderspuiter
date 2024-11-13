@@ -10,6 +10,7 @@ import {
   Sparkles,
   Crown,
 } from "lucide-react";
+import Badge from "../Badge";
 
 function SpecialPaintHero() {
   return (
@@ -24,15 +25,7 @@ function SpecialPaintHero() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Top badge */}
         <div className="mb-8 flex justify-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/10 px-3 py-2 backdrop-blur-sm">
-            <span className="flex items-center gap-1 rounded-full bg-primary px-3 py-1 text-sm font-medium text-white">
-              <Crown className="h-4 w-4" />
-              Exclusief
-            </span>
-            <span className="text-sm text-muted-foreground">
-              Luxe Decoratieve Technieken
-            </span>
-          </div>
+          <Badge icon={Crown} text="Luxe Decoratieve Technieken" />
         </div>
 
         <div className="flex flex-col items-center justify-between gap-12 lg:flex-row">

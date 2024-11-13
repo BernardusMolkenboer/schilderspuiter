@@ -7,10 +7,12 @@ import {
   Palette,
   Clock,
   Shield,
+  Trophy,
   Phone,
   CheckCircle2,
 } from "lucide-react";
 import Link from "next/link";
+import Badge from "../Badge";
 
 function SchilderwerkHero() {
   return (
@@ -25,14 +27,10 @@ function SchilderwerkHero() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Experience badge */}
         <div className="mb-8 flex justify-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-muted/20 bg-muted/10 px-3 py-2 backdrop-blur-sm">
-            <span className="rounded-full bg-primary px-3 py-1 text-sm font-medium text-white">
-              Vakmanschap
-            </span>
-            <span className="text-sm text-muted-foreground">
-              30+ jaar ervaring in traditioneel schilderwerk
-            </span>
-          </div>
+          <Badge
+            icon={Trophy}
+            text="30+ Jaar Ervaring in traditioneel schilderwerk"
+          />
         </div>
 
         <div className="flex flex-col items-center justify-between gap-12 lg:flex-row">

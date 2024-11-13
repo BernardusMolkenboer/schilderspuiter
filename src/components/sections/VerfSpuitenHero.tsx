@@ -10,6 +10,7 @@ import {
   Phone,
 } from "lucide-react";
 import Link from "next/link";
+import Badge from "../Badge";
 
 function VerfSpuitenHero() {
   return (
@@ -24,15 +25,8 @@ function VerfSpuitenHero() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-32 sm:px-6 lg:px-8">
         {/* Top badge */}
         <div className="mb-8 flex justify-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/10 px-3 py-2 backdrop-blur-sm">
-            <span className="flex items-center gap-1 rounded-full bg-primary px-3 py-1 text-sm font-medium text-white">
-              <Star className="h-4 w-4" />
-              Nieuw
-            </span>
-            <span className="text-sm text-muted-foreground">
-              Introductiekorting tot 20%
-            </span>
-          </div>
+          {/* Badge: 30+ Jaar Vakmanschap */}
+          <Badge icon={Star} text="Introductiekorting tot 20%" />
         </div>
 
         <div className="flex flex-col items-center justify-between gap-12 lg:flex-row">

@@ -4,22 +4,19 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Shield, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import Badge from "../Badge";
 
 export function HeroSection() {
   return (
     <div className="relative overflow-hidden bg-background pb-20 pt-32">
       <div className="mx-auto max-w-7xl">
         <div className="relative z-10 bg-background pb-16 sm:pb-24 md:pb-32">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="flex flex-col items-center justify-between gap-12 lg:flex-row">
               {/* Left Content */}
               <div className="space-y-8 lg:w-1/2">
-                <div className="flex items-center gap-2">
-                  <Shield className="h-6 w-6 text-primary" />
-                  <span className="text-muted-foreground">
-                    30+ Jaar Vakmanschap
-                  </span>
-                </div>
+                {/* Badge: 30+ Jaar Vakmanschap */}
+                <Badge icon={Shield} text="30+ Jaar Vakmanschap" />
 
                 <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl">
                   Uw Partner in{" "}

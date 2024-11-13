@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { Mail, ArrowRight, Phone, Shield, Trophy, Clock } from "lucide-react";
 import Link from "next/link";
-
+import Badge from "../Badge";
 export default function SpackspuitenHero() {
   return (
-    <section className="relative overflow-hidden bg-background pt-20">
+    <section className="relative overflow-hidden bg-background pt-10">
       <div className="mx-auto max-w-7xl">
         <div className="relative z-10 bg-background pb-8 sm:pb-16 md:pb-20 lg:w-full lg:pb-28">
           <div className="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20">
@@ -12,10 +12,10 @@ export default function SpackspuitenHero() {
               {/* Left Content */}
               <div className="space-y-8 lg:w-1/2">
                 <div className="flex items-center gap-2">
-                  <Trophy className="h-6 w-6 text-primary" />
-                  <span className="text-muted-foreground">
-                    #1 Spackspuit Specialist in Nederland
-                  </span>
+                  <Badge
+                    icon={Trophy}
+                    text="1 Spackspuit Specialist in Nederland"
+                  />
                 </div>
 
                 <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl">

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Star } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import Badge from "../Badge";
 
 export function HeroSection() {
   const benefits = [
@@ -13,7 +14,7 @@ export function HeroSection() {
   ];
 
   return (
-    <div className="relative overflow-hidden bg-background pt-20">
+    <div className="relative overflow-hidden bg-background pt-10">
       <div className="mx-auto max-w-7xl">
         <div className="relative z-10 bg-background pb-8 sm:pb-16 md:pb-20 lg:w-full lg:pb-28">
           <div className="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20">
@@ -21,10 +22,7 @@ export function HeroSection() {
               {/* Left Content */}
               <div className="space-y-8 lg:w-1/2">
                 <div className="flex items-center gap-2">
-                  <Star className="h-6 w-6 text-primary" />
-                  <span className="text-muted-foreground">
-                    Toonaangevend in vakmanschap
-                  </span>
+                  <Badge icon={Star} text="Toonaangevend in vakmanschap" />
                 </div>
 
                 <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl">
