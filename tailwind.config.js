@@ -64,6 +64,84 @@ module.exports = {
           "100%": { opacity: 1 },
         },
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme("colors.foreground"),
+            a: {
+              color: theme("colors.primary.DEFAULT"),
+              textDecoration: "underline",
+              "&:hover": {
+                color: theme("colors.primary.foreground"),
+              },
+            },
+            h1: {
+              color: theme("colors.foreground"),
+              fontWeight: "800",
+            },
+            h2: {
+              color: theme("colors.foreground"),
+              fontWeight: "700",
+            },
+            h3: {
+              color: theme("colors.foreground"),
+              fontWeight: "600",
+            },
+            blockquote: {
+              fontStyle: "italic",
+              color: theme("colors.muted.foreground"),
+              borderLeftColor: theme("colors.muted.DEFAULT"),
+            },
+            strong: {
+              color: theme("colors.foreground"),
+              fontWeight: "700",
+            },
+            code: {
+              backgroundColor: theme("colors.muted.DEFAULT"),
+              color: theme("colors.foreground"),
+              padding: "0.2em 0.4em",
+              borderRadius: "0.3em",
+              fontFamily: theme("fontFamily.mono"),
+            },
+            pre: {
+              backgroundColor: theme("colors.muted.DEFAULT"),
+              padding: "1em",
+              borderRadius: "0.5em",
+            },
+            ul: {
+              listStyleType: "disc",
+              paddingLeft: "1.5em",
+            },
+            ol: {
+              listStyleType: "decimal",
+              paddingLeft: "1.5em",
+            },
+            li: {
+              marginBottom: "0.5em",
+            },
+            p: {
+              marginTop: "0",
+              marginBottom: "1em",
+              lineHeight: "1.75",
+            },
+          },
+        },
+        dark: {
+          css: {
+            color: theme("colors.foreground"),
+            a: {
+              color: theme("colors.primary.DEFAULT"),
+              "&:hover": {
+                color: theme("colors.primary.foreground"),
+              },
+            },
+            blockquote: {
+              borderLeftColor: theme("colors.muted.DEFAULT"),
+              color: theme("colors.muted.foreground"),
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [

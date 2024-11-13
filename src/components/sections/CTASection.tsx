@@ -18,7 +18,7 @@ function CTASection() {
           {/* CTA Buttons */}
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <a
-              href="mailto:info@verfspuitenservice.nl"
+              href="mailto:info@schilder-spuiter.nl"
               className="inline-flex items-center rounded-lg bg-primary px-8 py-4 font-semibold text-white shadow-md transition-transform hover:scale-105"
               aria-label="Vraag een offerte aan via email"
             >

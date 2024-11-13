@@ -13,15 +13,15 @@ import {
 
 function SchilderwerkHero() {
   return (
-    <section className="relative overflow-hidden bg-background pb-24 pt-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-background via-primary/5 to-background pb-24 pt-32">
       {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute left-1/2 top-0 h-[1000px] w-[1000px] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-[800px] w-[800px] rounded-full bg-primary/20 blur-3xl" />
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute left-1/2 top-0 h-[1000px] w-[1000px] -translate-x-1/2 rounded-full bg-primary/10 opacity-70 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-[800px] w-[800px] rounded-full bg-primary/20 opacity-70 blur-3xl" />
       </div>
 
       {/* Content */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Experience badge */}
         <div className="mb-8 flex justify-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-muted/20 bg-muted/10 px-3 py-2 backdrop-blur-sm">

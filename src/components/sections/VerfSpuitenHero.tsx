@@ -11,20 +11,20 @@ import {
 
 function VerfSpuitenHero() {
   return (
-    <section className="relative min-h-screen bg-background">
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-background via-primary/5 to-background">
       {/* Decorative background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -right-1/4 -top-1/2 h-[1000px] w-[1000px] rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute -bottom-1/2 -left-1/4 h-[800px] w-[800px] rounded-full bg-secondary/10 blur-3xl" />
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute -right-1/4 -top-1/2 h-[1000px] w-[1000px] rounded-full bg-primary/10 opacity-70 blur-3xl" />
+        <div className="absolute -bottom-1/2 -left-1/4 h-[800px] w-[800px] rounded-full bg-secondary/10 opacity-70 blur-3xl" />
       </div>
 
       {/* Main content */}
-      <div className="container relative z-10 mx-auto max-w-screen-xl px-6 pt-20">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 pb-20 pt-20 sm:px-6 lg:px-8">
         {/* Top badge */}
         <div className="mb-8 flex justify-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/10 p-1.5 pl-2 pr-6 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/10 px-3 py-2 backdrop-blur-sm">
             <span className="flex items-center gap-1 rounded-full bg-primary px-3 py-1 text-sm font-medium text-white">
-              <Star className="h-3.5 w-3.5" />
+              <Star className="h-4 w-4" />
               Nieuw
             </span>
             <span className="text-sm text-muted-foreground">
@@ -33,15 +33,15 @@ function VerfSpuitenHero() {
           </div>
         </div>
 
-        <div className="grid items-center gap-12 pb-20 lg:grid-cols-12">
+        <div className="flex flex-col items-center justify-between gap-12 lg:flex-row">
           {/* Left content */}
-          <div className="space-y-8 lg:col-span-5">
-            <h1 className="text-5xl font-bold text-foreground md:text-6xl">
+          <div className="space-y-8 lg:w-1/2">
+            <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl">
               Transformeer uw ruimte met
               <div className="mt-2 text-primary">Professioneel Verfspuiten</div>
             </h1>
 
-            <p className="text-xl leading-relaxed text-muted-foreground">
+            <p className="text-base text-muted-foreground sm:max-w-xl sm:text-lg">
               Ontdek de toekomst van schilderwerk met onze geavanceerde
               spuittechnieken voor een perfect en duurzaam resultaat.
             </p>
@@ -56,9 +56,9 @@ function VerfSpuitenHero() {
               ].map((feature, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 rounded-xl border border-border bg-muted/10 p-4"
+                  className="flex items-center gap-3 rounded-xl border border-border bg-muted/10 p-4 transition-colors hover:bg-muted/20"
                 >
-                  <feature.icon className="h-5 w-5 text-primary" />
+                  <feature.icon className="h-6 w-6 text-primary" />
                   <span className="text-sm font-medium text-foreground">
                     {feature.text}
                   </span>
@@ -67,29 +67,27 @@ function VerfSpuitenHero() {
             </div>
 
             {/* CTA buttons */}
-            <div className="flex flex-col gap-4 pt-4 sm:flex-row">
+            <div className="flex flex-wrap gap-4">
               <a
                 href="mailto:info@verfspuitenservice.nl"
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-primary p-[2px] font-semibold text-white transition-all duration-300 hover:scale-105"
-                aria-label="Gratis offerte aanvragen via email"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-white shadow-lg transition-all duration-300 hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
-                <span className="relative flex items-center gap-2 rounded-xl bg-background px-8 py-4">
-                  <Mail className="h-5 w-5" />
-                  <span>Gratis Offerte</span>
-                  <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" />
-                </span>
+                <Mail className="h-5 w-5" />
+                <span>Gratis Offerte</span>
+                <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" />
               </a>
-              <button
-                className="inline-flex items-center justify-center rounded-xl border border-border bg-muted/10 px-8 py-4 font-semibold text-foreground transition-colors hover:bg-muted/20"
-                aria-label="Bekijk onze projecten"
+              <a
+                href="#projects"
+                className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-8 py-4 text-foreground shadow transition-colors hover:bg-muted hover:text-primary focus:ring-2 focus:ring-muted focus:ring-offset-2"
               >
-                Bekijk Onze Projecten
-              </button>
+                <ArrowRight className="h-5 w-5" />
+                <span>Bekijk Onze Projecten</span>
+              </a>
             </div>
           </div>
 
-          {/* Right content - Image grid */}
-          <div className="lg:col-span-7">
+          {/* Right content - Image showcase */}
+          <div className="relative lg:w-1/2">
             <div className="grid grid-cols-12 gap-4">
               <div className="col-span-8">
                 <div className="relative h-[400px] overflow-hidden rounded-2xl">
@@ -134,7 +132,7 @@ function VerfSpuitenHero() {
                   key={index}
                   className="flex flex-col items-center justify-center rounded-xl border border-border bg-muted/10 p-4"
                 >
-                  <span className="mb-1 text-2xl font-bold text-foreground">
+                  <span className="mb-1 text-3xl font-bold text-foreground">
                     {stat.number}
                   </span>
                   <span className="text-sm text-muted-foreground">
