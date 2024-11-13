@@ -16,12 +16,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { useState, useRef } from "react";
 
 const services = [
   {
@@ -79,6 +74,22 @@ const contactInfo = [
 
 export function DesktopMenu() {
   const { theme, setTheme } = useTheme();
+  const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = (menu: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current); // Clear any pending timeout
+    }
+    setHoveredMenu(menu);
+  };
+
+  const handleMouseLeave = () => {
+    // Set a delay before hiding the menu
+    timeoutRef.current = setTimeout(() => {
+      setHoveredMenu(null);
+    }, 200); // Delay in milliseconds
+  };
 
   return (
     <div className="hidden items-center space-x-6 md:flex">
@@ -89,24 +100,24 @@ export function DesktopMenu() {
         Home
       </Link>
 
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button
-            variant="ghost"
-            className="flex items-center gap-1 px-3 py-2"
-            aria-label="Open diensten menu"
-          >
-            Diensten
-            <ChevronDown className="h-4 w-4" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent
-          align="end"
-          className="w-[240px] rounded-md bg-white text-black shadow-md dark:bg-neutral-900 dark:text-white"
+      <div
+        className="relative"
+        onMouseEnter={() => handleMouseEnter("diensten")}
+        onMouseLeave={handleMouseLeave}
+      >
+        <Button
+          variant="ghost"
+          className="flex items-center gap-1 px-3 py-2"
+          aria-label="Open diensten menu"
         >
-          {services.map((service) => (
-            <DropdownMenuItem key={service.href} asChild>
+          Diensten
+          <ChevronDown className="h-4 w-4" />
+        </Button>
+        {hoveredMenu === "diensten" && (
+          <div className="absolute right-0 mt-2 w-[240px] rounded-md border border-border bg-white text-black shadow-md dark:border-neutral-700 dark:bg-neutral-900 dark:text-white">
+            {services.map((service) => (
               <Link
+                key={service.href}
                 href={service.href}
                 className="group flex items-center gap-3 rounded-md p-2 hover:bg-muted dark:hover:bg-neutral-800"
               >
@@ -120,10 +131,10 @@ export function DesktopMenu() {
                   </div>
                 </div>
               </Link>
-            </DropdownMenuItem>
-          ))}
-        </DropdownMenuContent>
-      </DropdownMenu>
+            ))}
+          </div>
+        )}
+      </div>
 
       <Link
         href="/over-ons"
@@ -132,24 +143,24 @@ export function DesktopMenu() {
         Over Ons
       </Link>
 
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button
-            variant="ghost"
-            className="flex items-center gap-1 px-3 py-2"
-            aria-label="Open contact menu"
-          >
-            Contact
-            <ChevronDown className="h-4 w-4" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent
-          align="end"
-          className="w-[240px] rounded-md bg-white text-black shadow-md dark:bg-neutral-900 dark:text-white"
+      <div
+        className="relative"
+        onMouseEnter={() => handleMouseEnter("contact")}
+        onMouseLeave={handleMouseLeave}
+      >
+        <Button
+          variant="ghost"
+          className="flex items-center gap-1 px-3 py-2"
+          aria-label="Open contact menu"
         >
-          {contactInfo.map((item) => (
-            <DropdownMenuItem key={item.href} asChild>
+          Contact
+          <ChevronDown className="h-4 w-4" />
+        </Button>
+        {hoveredMenu === "contact" && (
+          <div className="absolute right-0 mt-2 w-[240px] rounded-md border border-border bg-white text-black shadow-md dark:border-neutral-700 dark:bg-neutral-900 dark:text-white">
+            {contactInfo.map((item) => (
               <Link
+                key={item.href}
                 href={item.href}
                 className="group flex items-start gap-3 rounded-md p-2 hover:bg-muted dark:hover:bg-neutral-800"
               >
@@ -163,10 +174,10 @@ export function DesktopMenu() {
                   </div>
                 </div>
               </Link>
-            </DropdownMenuItem>
-          ))}
-        </DropdownMenuContent>
-      </DropdownMenu>
+            ))}
+          </div>
+        )}
+      </div>
 
       <Button
         variant="ghost"
