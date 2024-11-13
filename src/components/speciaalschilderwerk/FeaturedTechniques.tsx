@@ -5,7 +5,7 @@ import { Sparkles, Palette, ArrowRight } from "lucide-react";
 const techniques = [
   {
     title: "Giorgio Graesan Oro",
-    description: "Luxueuze gouden afwerking met Italiaanse allure",
+    description: "Luxueuze gouden afwerking met Italiaanse allure.",
     features: [
       "Elegante uitstraling",
       "Duurzame afwerking",
@@ -16,14 +16,14 @@ const techniques = [
   },
   {
     title: "Metallic Effects",
-    description: "Moderne metallic effecten voor een tijdloze look",
+    description: "Moderne metallic effecten voor een tijdloze look.",
     features: ["Rijke texturen", "Lichtreflecterend", "Veelzijdig toepasbaar"],
     image:
       "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1974&auto=format&fit=crop",
   },
   {
     title: "Stucco Veneziano",
-    description: "Klassieke Venetiaanse pleistertechniek",
+    description: "Klassieke Venetiaanse pleistertechniek.",
     features: ["Marmerlook", "Hoogglans finish", "Tijdloze elegantie"],
     image:
       "https://images.unsplash.com/photo-1604147495798-57beb5d6af73?q=80&w=2070&auto=format&fit=crop",
@@ -55,8 +55,9 @@ export default function FeaturedTechniques() {
           {techniques.map((technique, index) => (
             <div
               key={index}
-              className="group overflow-hidden rounded-2xl bg-muted/10 shadow-md transition-all duration-300 hover:shadow-lg dark:bg-neutral-800"
+              className="group overflow-hidden rounded-2xl bg-muted shadow-lg transition-all duration-300 hover:shadow-xl dark:bg-neutral-800"
             >
+              {/* Image Section */}
               <div className="relative h-64">
                 <Image
                   src={technique.image}
@@ -64,13 +65,15 @@ export default function FeaturedTechniques() {
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent dark:from-black/60 dark:via-black/30" />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-2xl font-bold text-foreground dark:text-white">
+                  <h3 className="text-2xl font-bold text-white dark:text-white/90">
                     {technique.title}
                   </h3>
                 </div>
               </div>
+
+              {/* Content Section */}
               <div className="p-6">
                 <p className="mb-4 text-muted-foreground">
                   {technique.description}
@@ -79,7 +82,7 @@ export default function FeaturedTechniques() {
                   {technique.features.map((feature, index) => (
                     <li
                       key={index}
-                      className="flex items-center text-foreground"
+                      className="flex items-center text-muted-foreground"
                     >
                       <Sparkles className="mr-2 h-4 w-4 text-primary" />
                       {feature}
@@ -87,8 +90,8 @@ export default function FeaturedTechniques() {
                   ))}
                 </ul>
                 <a
-                  href="#"
-                  className="inline-flex items-center font-semibold text-primary transition-colors hover:text-primary/80"
+                  href={`#${technique.title.toLowerCase().replace(" ", "-")}`}
+                  className="inline-flex items-center font-semibold text-primary transition-colors hover:text-primary/90"
                   aria-label={`Meer informatie over ${technique.title}`}
                 >
                   Meer informatie
