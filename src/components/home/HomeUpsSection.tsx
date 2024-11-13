@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 function HomeUpsSection() {
   return (
     <section className="bg-gray-50 py-20 transition-colors duration-300 dark:bg-neutral-900">
-      <div className="mx-auto max-w-screen-xl px-4">
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6">
         <div className="grid items-center gap-12 md:grid-cols-2">
           {/* Text Content */}
           <div>

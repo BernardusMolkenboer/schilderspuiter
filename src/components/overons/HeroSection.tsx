@@ -33,17 +33,17 @@ export function HeroSection() {
                 </p>
 
                 <div className="flex gap-4">
-                  <Link href="mailto:info@schilder-spuiter.nl">
+                  <Link href="/contact">
                     <Button size="lg" className="gap-2">
                       <Mail className="h-5 w-5" />
                       Neem Contact Op
                       <ArrowRight className="h-4 w-4" />
                     </Button>
                   </Link>
-                  <Link href="tel:+31612345678">
+                  <Link href="tel:+31852129613">
                     <Button size="lg" variant="outline" className="gap-2">
                       <Phone className="h-5 w-5" />
-                      Bel Direct
+                      Bel direct
                     </Button>
                   </Link>
                 </div>
