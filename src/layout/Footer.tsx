@@ -158,7 +158,7 @@ function Footer() {
                 Ontworpen met zorg en vakmanschap door
               </p>
               <div className="h-8">
-                <Link href="https://www.abn.company" target="_blank">
+                <Link href="https://www.abn.company/nl" target="_blank">
                   {/* Light Theme Animated Logo */}
                   <AbnLogoAnimated className="block h-full dark:hidden" />
                   {/* Dark Theme Animated Logo */}
