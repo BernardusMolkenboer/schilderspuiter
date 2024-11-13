@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Phone } from "lucide-react";
+import Link from "next/link";
 
 function CTASection() {
   return (
@@ -17,22 +18,22 @@ function CTASection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <a
-              href="mailto:info@schilder-spuiter.nl"
+            <Link
+              href="/contact"
               className="inline-flex items-center rounded-lg bg-primary px-8 py-4 font-semibold text-white shadow-md transition-transform hover:scale-105"
               aria-label="Vraag een offerte aan via email"
             >
               <Mail className="mr-2 h-5 w-5" />
               Vraag Een Offerte Aan
-            </a>
-            <a
+            </Link>
+            <Link
               href="tel:+31852129613"
               className="inline-flex items-center rounded-lg border border-border bg-muted/10 px-8 py-4 font-semibold text-foreground shadow-md transition-transform hover:bg-muted/20"
               aria-label="Bel direct voor een afspraak"
             >
               <Phone className="mr-2 h-5 w-5" />
               Bel Direct: +31 85 2129613
-            </a>
+            </Link>
           </div>
         </div>
       </div>
