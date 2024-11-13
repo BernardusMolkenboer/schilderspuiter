@@ -10,6 +10,8 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
+import AbnLogoAnimated from "@/components/abnlogo";
+import AbnLogoAnimatedWhite from "@/components/abnlogowhite";
 
 function Footer() {
   const socialLinks = [
@@ -20,7 +22,7 @@ function Footer() {
 
   return (
     <footer className="bg-gradient-to-br from-white to-gray-50 text-black dark:from-[#151515] dark:to-[#151515] dark:text-gray-300">
-      <div className="mx-auto max-w-screen-xl px-6 py-12">
+      <div className="mx-auto max-w-screen-xl px-6 pb-6 pt-12">
         {/* Top Section */}
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           {/* Branding Section */}
@@ -138,14 +140,33 @@ function Footer() {
             </ul>
           </div>
         </div>
+        {/* Subfooter */}
+        <div className="mt-12 border-t border-gray-300 pt-5 text-center dark:border-gray-700">
+          <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
+            {/* Copyright Section */}
+            <div className="text-sm text-gray-500 dark:text-gray-400">
+              &copy; {new Date().getFullYear()}{" "}
+              <span className="font-medium text-gray-800 dark:text-gray-100">
+                Schilder-Spuiter.nl
+              </span>{" "}
+              Alle rechten voorbehouden.
+            </div>
 
-        {/* Footer Bottom */}
-        <div className="mt-12 border-t border-gray-300 pt-8 text-center text-gray-600 dark:border-gray-700 dark:text-gray-400">
-          <p>
-            &copy; {new Date().getFullYear()} Schilder-Spuiter.nl. Alle rechten
-            voorbehouden.
-          </p>
-          <p className="mt-2">Ontworpen met zorg en vakmanschap.</p>
+            {/* Designed By */}
+            <div className="flex items-center gap-2">
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                Ontworpen met zorg en vakmanschap door
+              </p>
+              <div className="h-8">
+                <Link href="https://www.abn.company" target="_blank">
+                  {/* Light Theme Animated Logo */}
+                  <AbnLogoAnimated className="block h-full dark:hidden" />
+                  {/* Dark Theme Animated Logo */}
+                  <AbnLogoAnimatedWhite className="hidden h-full dark:block" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
