@@ -42,6 +42,11 @@ module.exports = withTM({
         destination: "/data-scraping-integration",
         permanent: true, // Use 'true' for a 301 redirect; 'false' for a 302
       },
+      {
+        source: "/contact-opnemen",
+        destination: "/contact",
+        permanent: true, // Use 'true' for a 301 redirect; 'false' for a 302
+      },
     ];
   },
 });
