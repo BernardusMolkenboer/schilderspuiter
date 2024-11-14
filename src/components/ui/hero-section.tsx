@@ -93,7 +93,6 @@ export function HeroSection() {
                     alt="Professional painting"
                     fill
                     className="rounded-2xl object-cover"
-                    priority
                   />
                   <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/10" />
                 </div>
