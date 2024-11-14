@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "../ui/button";
 
 function HomeUpsSection() {
@@ -33,11 +34,11 @@ function HomeUpsSection() {
 
           {/* Image Section */}
           <div className="relative h-[400px]">
-            <div
-              className="h-full w-full rounded-lg bg-cover bg-center shadow-xl"
-              style={{
-                backgroundImage: "url('/images/waarom-schilder-spuiter.png')",
-              }}
+            <Image
+              src="/images/waarom-schilder-spuiter.png"
+              alt="Waarom Schilder-Spuiter.nl"
+              layout="fill"
+              className="rounded-lg object-cover shadow-xl"
             />
           </div>
         </div>
