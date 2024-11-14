@@ -89,7 +89,7 @@ function VerfSpuitenHero() {
                 <div className="relative h-[400px] overflow-hidden rounded-2xl">
                   <Image
                     src="/images/spuitwerk.png"
-                    alt="Professional paint spraying"
+                    alt="Professioneel spuitwerk"
                     fill
                     className="object-cover"
                     priority
@@ -100,16 +100,16 @@ function VerfSpuitenHero() {
               <div className="col-span-4 space-y-4">
                 <div className="relative h-[192px] overflow-hidden rounded-2xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=2071&auto=format&fit=crop"
-                    alt="Paint detail"
+                    src="/images/verfspuiter-aan-het-werk.png"
+                    alt="Verfspuiter aan het werk"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative h-[192px] overflow-hidden rounded-2xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?q=80&w=2070&auto=format&fit=crop"
-                    alt="Paint spraying"
+                    src="/images/verfspuiten-wanden-en-plafonds.png"
+                    alt="Verfspuiten wanden en plafonds"
                     fill
                     className="object-cover"
                   />
