@@ -88,7 +88,7 @@ function SpecialPaintHero() {
               <div className="col-span-7">
                 <div className="relative h-[500px] overflow-hidden rounded-2xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1974&auto=format&fit=crop"
+                    src="/images/exclusieve-docoratieve-verfkunst.png"
                     alt="Luxe wandafwerking"
                     fill
                     className="object-cover"
@@ -100,7 +100,7 @@ function SpecialPaintHero() {
               <div className="col-span-5 space-y-4">
                 <div className="relative h-[240px] overflow-hidden rounded-2xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1604147706283-d7119b5b822c?q=80&w=2032&auto=format&fit=crop"
+                    src="/images/speciaal-schilderwerk.png"
                     alt="Decoratief schilderwerk"
                     fill
                     className="object-cover"
@@ -108,7 +108,7 @@ function SpecialPaintHero() {
                 </div>
                 <div className="relative h-[240px] overflow-hidden rounded-2xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1974&auto=format&fit=crop"
+                    src="/images/modern-schilderwerk.png"
                     alt="Speciale verftechniek"
                     fill
                     className="object-cover"
