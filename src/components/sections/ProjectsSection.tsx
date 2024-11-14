@@ -5,24 +5,22 @@ import { ArrowRight } from "lucide-react";
 const projects = [
   {
     title: "Kantoorpand Amsterdam",
-    description: "Complete buitengevel renovatie met duurzame coating",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
+    description: "14 Etages gespoten met duurzame latex coating.",
+    image: "/images/bedrijfspand-amsterdam-verfspuiten.png",
     category: "Bedrijfspand",
   },
   {
     title: "Appartementencomplex Rotterdam",
-    description: "Renovatie van 24 balkons en galerijen",
+    description: "Renovatie spuitwerk voor 24 woningen.",
     image:
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop",
     category: "Woningbouw",
   },
   {
-    title: "Industriële Hal Utrecht",
-    description: "Coating van 2500m² wandoppervlak",
-    image:
-      "https://images.unsplash.com/photo-1565636252854-41856180329c?q=80&w=2071&auto=format&fit=crop",
-    category: "Industrie",
+    title: "Nieuwbouw Woningen",
+    description: "Coating van 250m² wandoppervlak/ woning",
+    image: "/images/buiten-gevel-voorbereiding.png",
+    category: "Nieuwbouw",
   },
 ];
 
