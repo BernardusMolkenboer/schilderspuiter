@@ -69,12 +69,12 @@ function ColorSection() {
           <div className="relative">
             <div className="grid grid-cols-3 gap-4">
               {[
-                "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2158&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1604762524889-3e2fcc145683?q=80&w=2071&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=2071&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?q=80&w=2070&auto=format&fit=crop",
+                "/images/wanden-en-plafonds-schilderwerk.png",
+                "/images/renovatie-schilderwerk.png",
+                "/images/kleuren-schilderwerk.png",
+                "/images/traditioneel-schilderwerk.png",
+                "/images/rol-en-hand-schilderwerk.png",
+                "/images/schilderwerk-in-kleur.png",
               ].map((src, index) => (
                 <div
                   key={index}

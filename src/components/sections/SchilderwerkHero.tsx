@@ -141,8 +141,8 @@ function SchilderwerkHero() {
               <div className="col-span-8">
                 <div className="relative h-[500px] overflow-hidden rounded-2xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop"
-                    alt="Professioneel schilderwerk"
+                    src="/images/traditioneel-schilderwerk.png"
+                    alt="Traditioneel schilderwerk"
                     fill
                     className="object-cover"
                     priority
@@ -153,7 +153,7 @@ function SchilderwerkHero() {
               <div className="col-span-4 space-y-4">
                 <div className="relative h-[240px] overflow-hidden rounded-2xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=2071&auto=format&fit=crop"
+                    src="/images/schilderwerk-in-kleur.png"
                     alt="Detail schilderwerk"
                     fill
                     className="object-cover"
@@ -161,7 +161,7 @@ function SchilderwerkHero() {
                 </div>
                 <div className="relative h-[240px] overflow-hidden rounded-2xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1604762524889-3e2fcc145683?q=80&w=2071&auto=format&fit=crop"
+                    src="/images/rol-en-hand-schilderwerk.png"
                     alt="Schilderwerk proces"
                     fill
                     className="object-cover"

@@ -69,7 +69,7 @@ export default function SpackspuitenHero() {
               <div className="relative lg:w-1/2">
                 <div className="relative h-[500px] w-full overflow-hidden rounded-2xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2158&auto=format&fit=crop"
+                    src="/images/spackspuiten-plafond.png"
                     alt="Professional wall finishing"
                     fill
                     className="rounded-2xl object-cover"
