@@ -151,18 +151,28 @@ function Footer() {
               </span>{" "}
               Alle rechten voorbehouden.
             </div>
-
             {/* Designed By */}
             <div className="flex items-center gap-2">
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 Ontworpen met zorg en vakmanschap door
               </p>
               <div className="h-8">
-                <Link href="https://www.abn.company/nl" target="_blank">
+                <Link
+                  href="https://www.abn.company/nl"
+                  target="_blank"
+                  aria-label="ABN Company - Naar officiële website"
+                >
                   {/* Light Theme Animated Logo */}
-                  <AbnLogoAnimated className="block h-full dark:hidden" />
+                  <AbnLogoAnimated
+                    className="block h-full dark:hidden"
+                    aria-hidden="true"
+                  />
                   {/* Dark Theme Animated Logo */}
-                  <AbnLogoAnimatedWhite className="hidden h-full dark:block" />
+                  <AbnLogoAnimatedWhite
+                    className="hidden h-full dark:block"
+                    aria-hidden="true"
+                  />
+                  <span className="sr-only">ABN Company</span>
                 </Link>
               </div>
             </div>

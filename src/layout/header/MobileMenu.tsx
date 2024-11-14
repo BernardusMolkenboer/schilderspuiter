@@ -43,6 +43,9 @@ export function MobileMenu() {
         variant="ghost"
         size="icon"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        aria-label={
+          theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+        }
       >
         {theme === "dark" ? (
           <Sun className="h-5 w-5" />
@@ -54,7 +57,11 @@ export function MobileMenu() {
       {/* Menu Button */}
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon">
+          <Button
+            variant="ghost"
+            size="icon"
+            aria-label={open ? "Close menu" : "Open menu"}
+          >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </SheetTrigger>
