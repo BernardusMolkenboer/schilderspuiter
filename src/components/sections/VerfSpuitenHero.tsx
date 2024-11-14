@@ -88,7 +88,7 @@ function VerfSpuitenHero() {
               <div className="col-span-8">
                 <div className="relative h-[400px] overflow-hidden rounded-2xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop"
+                    src="/images/spuitwerk.png"
                     alt="Professional paint spraying"
                     fill
                     className="object-cover"

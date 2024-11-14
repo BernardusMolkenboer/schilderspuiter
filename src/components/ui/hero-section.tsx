@@ -90,7 +90,7 @@ export function HeroSection() {
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 mix-blend-multiply" />
                   <Image
                     src="/images/spuitwerk.png"
-                    alt="Professional painting"
+                    alt="Professioneel Schilder- en Spuitwerk"
                     fill
                     className="rounded-2xl object-cover"
                     priority
