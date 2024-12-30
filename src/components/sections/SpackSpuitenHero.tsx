@@ -2,12 +2,15 @@ import Image from "next/image";
 import { Mail, ArrowRight, Phone, Shield, Trophy, Clock } from "lucide-react";
 import Link from "next/link";
 import Badge from "../Badge";
+
 export default function SpackspuitenHero() {
   return (
-    <section className="relative overflow-hidden bg-background pt-10">
+    // 1) Remove overflow-hidden to avoid accidental clipping on small screens
+    <section className="relative bg-background pt-10">
       <div className="mx-auto max-w-7xl">
-        <div className="relative z-10 bg-background pb-8 sm:pb-16 md:pb-20 lg:w-full lg:pb-28">
+        <div className="relative z-10 bg-background pb-8 sm:pb-16 md:pb-20 lg:pb-28">
           <div className="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20">
+            {/* Stack on mobile (image below text), row on large screens */}
             <div className="flex flex-col items-center justify-between gap-12 lg:flex-row">
               {/* Left Content */}
               <div className="space-y-8 lg:w-1/2">
@@ -33,11 +36,12 @@ export default function SpackspuitenHero() {
                 <div className="flex flex-wrap gap-4">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-white shadow-lg transition-all duration-300 hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    className="group inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-white shadow-lg transition-all duration-300 hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
                   >
                     <Mail className="h-5 w-5" />
                     <span>Neem contact op</span>
-                    <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" />
+                    {/* Use group-hover for subtle arrow animation */}
+                    <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                   <Link
                     href="tel:+31852129613"
@@ -48,6 +52,7 @@ export default function SpackspuitenHero() {
                   </Link>
                 </div>
 
+                {/* Small Feature Grid */}
                 <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
                   {[
                     { icon: Shield, text: "10 Jaar Garantie" },
@@ -64,10 +69,12 @@ export default function SpackspuitenHero() {
                   ))}
                 </div>
               </div>
+              {/* End Left Content */}
 
               {/* Right Image */}
-              <div className="relative lg:w-1/2">
-                <div className="relative h-[500px] w-full overflow-hidden rounded-2xl">
+              <div className="relative w-full lg:w-1/2">
+                {/* 2) Give a defined height that scales at each breakpoint */}
+                <div className="relative h-64 w-full overflow-hidden rounded-2xl sm:h-72 md:h-[500px]">
                   <Image
                     src="/images/spackspuiten-plafond.png"
                     alt="Professional wall finishing"
@@ -78,12 +85,20 @@ export default function SpackspuitenHero() {
                   <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/10" />
                 </div>
 
-                {/* Decorative Elements */}
-                <div className="absolute -right-4 -top-4 h-72 w-72 rounded-full bg-primary/5 blur-3xl" />
-                <div className="absolute -bottom-4 -left-4 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+                {/* 3) Decorative Elements => behind the image; also hidden on small if desired */}
+                <div
+                  className="pointer-events-none absolute -right-4 -top-4 hidden h-72 w-72 
+                              rounded-full bg-primary/5 blur-3xl sm:block"
+                  style={{ zIndex: 0 }} // behind
+                />
+                <div
+                  className="pointer-events-none absolute -bottom-4 -left-4 hidden h-72 w-72 
+                              rounded-full bg-primary/10 blur-3xl sm:block"
+                  style={{ zIndex: 0 }}
+                />
 
-                {/* Stats Card */}
-                <div className="absolute -bottom-6 -left-6 rounded-lg border border-border bg-background/80 p-4 shadow-lg backdrop-blur-sm">
+                {/* 4) Stats Card => absolute on lg+, relative on mobile */}
+                <div className="relative mt-4 rounded-lg border border-border bg-background/80 p-4 shadow-lg backdrop-blur-sm lg:absolute lg:-bottom-6 lg:-left-6 lg:mt-0">
                   <div className="grid grid-cols-2 gap-4">
                     {[
                       { number: "15+", label: "Jaren Ervaring" },
@@ -102,7 +117,9 @@ export default function SpackspuitenHero() {
                     ))}
                   </div>
                 </div>
+                {/* End Stats Card */}
               </div>
+              {/* End Right Image */}
             </div>
           </div>
         </div>
