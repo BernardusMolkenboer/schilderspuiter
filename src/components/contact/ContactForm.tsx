@@ -3,6 +3,12 @@
 import { useState } from "react";
 import { Send, Loader2 } from "lucide-react";
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [resultMessage, setResultMessage] = useState<string | null>(null);
@@ -18,6 +24,14 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     setResultMessage(null);
+
+    // Google Analytics: Track form submission start
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "form_submit",
+      formName: "contact_form",
+      formData: { ...formData },
+    });
 
     const payload = {
       fields: [
@@ -55,18 +69,44 @@ export default function ContactForm() {
           message: "",
         });
         setResultMessage("Bedankt! Uw bericht is succesvol verzonden.");
+
+        // Google Analytics: Track successful form submission
+        window.dataLayer.push({
+          event: "form_success",
+          formName: "contact_form",
+          formData: { ...formData },
+        });
       } else {
         const errorData = await response.json();
         console.error("Error response from HubSpot:", errorData);
         setResultMessage(
           "Er is iets misgegaan bij het verzenden van uw bericht. Probeer het opnieuw."
         );
+
+        // Google Analytics: Track form submission failure
+        window.dataLayer.push({
+          event: "form_error",
+          formName: "contact_form",
+          error: errorData.message || "Unknown error",
+        });
       }
-    } catch (error) {
+    } catch (error: unknown) {
       console.error("Error submitting form:", error);
-      setResultMessage(
-        "Er is een onverwachte fout opgetreden. Probeer het later opnieuw."
-      );
+      let errorMessage =
+        "Er is een onverwachte fout opgetreden. Probeer het later opnieuw.";
+
+      if (error instanceof Error) {
+        errorMessage = error.message || errorMessage;
+      }
+
+      setResultMessage(errorMessage);
+
+      // Google Analytics: Track form submission error
+      window.dataLayer.push({
+        event: "form_error",
+        formName: "contact_form",
+        error: error instanceof Error ? error.message : "Network error",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -79,6 +119,14 @@ export default function ContactForm() {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+
+    // Google Analytics: Track form field interaction
+    window.dataLayer.push({
+      event: "form_field_interaction",
+      formName: "contact_form",
+      fieldName: name,
+      fieldValue: value,
+    });
   };
 
   return (
@@ -92,7 +140,16 @@ export default function ContactForm() {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-6"
+        onFocus={() =>
+          window.dataLayer.push({
+            event: "form_start",
+            formName: "contact_form",
+          })
+        }
+      >
         <div className="space-y-4">
           <div>
             <label
