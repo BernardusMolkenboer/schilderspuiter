@@ -25,6 +25,17 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setResultMessage(null);
 
+    // Log formData for debugging
+    console.log("Submitting form with data:", formData);
+
+    // Google Analytics: Track form submission start
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "form_submit",
+      formName: "contact_form",
+      ...formData, // Flattened formData
+    });
+
     const payload = {
       fields: [
         { name: "name", value: formData.name },
@@ -63,11 +74,10 @@ export default function ContactForm() {
         setResultMessage("Bedankt! Uw bericht is succesvol verzonden.");
 
         // Google Analytics: Track successful form submission
-        window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: "form_success",
           formName: "contact_form",
-          formData: { ...formData },
+          ...formData, // Flattened formData
         });
       } else {
         const errorData = await response.json();
@@ -77,11 +87,11 @@ export default function ContactForm() {
         );
 
         // Google Analytics: Track form submission failure
-        window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: "form_error",
           formName: "contact_form",
           error: errorData.message || "Unknown error",
+          ...formData, // Optionally include formData
         });
       }
     } catch (error: unknown) {
@@ -96,11 +106,11 @@ export default function ContactForm() {
       setResultMessage(errorMessage);
 
       // Google Analytics: Track form submission error
-      window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: "form_error",
         formName: "contact_form",
         error: error instanceof Error ? error.message : "Network error",
+        ...formData, // Optionally include formData
       });
     } finally {
       setIsSubmitting(false);
@@ -116,7 +126,6 @@ export default function ContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
 
     // Google Analytics: Track form field interaction
-    window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: "form_field_interaction",
       formName: "contact_form",
@@ -143,6 +152,7 @@ export default function ContactForm() {
           window.dataLayer.push({
             event: "form_start",
             formName: "contact_form",
+            ...formData, // Optionally include formData
           })
         }
       >
