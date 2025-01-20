@@ -25,14 +25,6 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setResultMessage(null);
 
-    // Google Analytics: Track form submission start
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "form_submit",
-      formName: "contact_form",
-      formData: { ...formData },
-    });
-
     const payload = {
       fields: [
         { name: "name", value: formData.name },
@@ -71,6 +63,7 @@ export default function ContactForm() {
         setResultMessage("Bedankt! Uw bericht is succesvol verzonden.");
 
         // Google Analytics: Track successful form submission
+        window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: "form_success",
           formName: "contact_form",
@@ -84,6 +77,7 @@ export default function ContactForm() {
         );
 
         // Google Analytics: Track form submission failure
+        window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: "form_error",
           formName: "contact_form",
@@ -102,6 +96,7 @@ export default function ContactForm() {
       setResultMessage(errorMessage);
 
       // Google Analytics: Track form submission error
+      window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: "form_error",
         formName: "contact_form",
@@ -121,6 +116,7 @@ export default function ContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
 
     // Google Analytics: Track form field interaction
+    window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: "form_field_interaction",
       formName: "contact_form",
