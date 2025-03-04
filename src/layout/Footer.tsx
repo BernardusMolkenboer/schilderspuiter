@@ -164,7 +164,7 @@ function Footer() {
                 >
                   {/* Light Theme Animated Logo */}
                   <AbnLogoAnimated
-                    className="block h-full dark:hidden"
+                    className="block h-full"
                     aria-hidden="true"
                   />
                   {/* Dark Theme Animated Logo */}
